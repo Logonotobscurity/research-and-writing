@@ -105,6 +105,21 @@ Clip Creator Studio discussions included YouTube ingestion, transcription, editi
 - Historical branch reference: `research/source-ingestion-2026-09-29`.
 - Scripts/files named in a Gemini Notebook summary include `gigpilot_mcp_server.py`, `gigpilot_telegram_memory_bot.py`, `gigpilot-memory-reminders-guide.md`, `tool_rag_pipeline.py`, and `qdrant_search_skill.py`. Their existence and current contents were not independently established here.
 
-## 9. Portfolio audit required before public use
+## 9. Expanded product dossiers
+
+The account-wide index is supplemented by focused dossiers for selected projects. These explain the user problem, intended product boundary, architecture and workflow, historical implementation reports, verification gaps, and open questions:
+
+- [ContextPocket](./products/context-pocket.md)
+- [Re:Mind Me](./products/remind-me.md)
+- [MorrowVoice](./products/morrowvoice.md)
+- [Grounded Guide](./products/grounded-guide.md)
+- [CLIPIN / Clip Creator Studio](./products/clipin-clip-creator-studio.md)
+- [GigPilot, AgentBridge Africa, SafeChain, and related products](./products/gigpilot-agentbridge-safechain-and-related-products.md)
+- [ATS and career intelligence](./products/ats-and-career-intelligence.md)
+- [Full product dossier index](./products/README.md)
+
+The dossier set is intentionally selective. Smaller concepts with limited retained context remain represented in this portfolio register rather than being expanded with invented detail. A product's presence here does not mean it is currently active or production-ready.
+
+## 10. Portfolio audit required before public use
 
 For each item, verify repository, branch, maturity, test/deployment state, real users, validated metrics, dependencies, ownership, and differentiation. Decide whether it should be a standalone product, shared component, or research workstream. Do not inflate the portfolio by presenting concepts, components, or blueprints as production products.
