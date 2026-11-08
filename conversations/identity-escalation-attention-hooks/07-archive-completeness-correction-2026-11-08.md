@@ -125,8 +125,6 @@ For iterative prompts, save each complete version separately (for example, `prom
 
 ## 6. Current archival status
 
-<badge-placeholder />
-
 **Status: PARTIAL / NOT A COMPLETE TRANSCRIPT.**
 
 This folder is a useful phase summary, but it is not yet a complete archive of all conversation outputs. The eight lines and the recorded user brief are recoverable; several substantial assistant and user-pasted deliverables are not. The source registry also remains incomplete for the original research session.
