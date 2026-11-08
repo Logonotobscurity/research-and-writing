@@ -24,3 +24,8 @@ The full V1/V2/V3 texts of the daily identity-escalation automation prompt are m
 
 ## Future versioning
 Store each complete version separately (prompt-v1.md, prompt-v2.md, prompt-v3.md). Include exact text, timestamp, intended behaviour, delta, communicated rationale, associated output, and whether deployed or proposed. Never overwrite an earlier version.
+
+
+## Related original generated-line and automation records
+
+The initial eight attention lines are preserved in [03 — Generated Lines and Flyer Production](../identity-escalation-attention-hooks/03-generated-lines-and-flyer-production.md). The subsequent prompt refinement and first automation result are preserved in [04 — Automation Prompt Iteration](../identity-escalation-attention-hooks/04-automation-prompt-iteration.md) and [05 — First Automation Output and Refinement](../identity-escalation-attention-hooks/05-first-automation-output-and-refinement.md). The later completeness correction explains which original rationales, contexts, full V1/V2/V3 prompt texts, flyer prompts/assets, seven-line automation output, deployment table, and safeguards remain unavailable: [07 — Archive Completeness Correction](../identity-escalation-attention-hooks/07-archive-completeness-correction-2026-11-08.md). These are direct cross-references; the missing source text is not reconstructed here.
