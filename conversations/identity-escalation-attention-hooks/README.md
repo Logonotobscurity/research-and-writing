@@ -23,6 +23,7 @@ It is based on the accessible conversation thread. Exact user instructions and k
 8. [07 — Archive completeness correction and verbatim preservation](./07-archive-completeness-correction-2026-11-08.md)
 9. [Source registry addendum — 8 November 2026](./SOURCE_REGISTRY-ADDENDUM-2026-11-08.md)
 10. [08 — Archival work session: assistant outputs and repository actions](./08-archival-work-session-assistant-outputs-2026-11-08.md)
+11. [09 — Complete sequence reconstruction, verbatim extracts, and recovery audit](./09-complete-sequence-reconstruction-and-recovery-2026-11-08.md)
 
 ## Evidence conventions
 
