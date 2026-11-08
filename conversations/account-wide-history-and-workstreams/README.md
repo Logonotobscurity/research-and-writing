@@ -85,3 +85,7 @@ The separate `conversations/identity-escalation-attention-hooks/` folder preserv
 Start with the phase map for chronology, then open the thematic documents relevant to the topic. The portfolio register helps locate projects; the evidence and maintenance document lists what must be verified.
 
 When new conversations add or change information, preserve previous states and append dated updates. Do not silently rewrite history or present a reconstructed summary as a verbatim transcript.
+
+## Source-first archive
+
+See [Account-wide Source Archive](../account-wide-source-archive/README.md) for recoverable exact messages, original saved outputs, prompt/version evidence, URLs, automation results, assets, and gaps. It supplements this thematic synthesis.
