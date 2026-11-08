@@ -1,0 +1,36 @@
+ContextPocket publication and validation report
+Date: 2026-10-28
+Repository: https://github.com/Logonotobscurity/context-pocket
+Visibility: Private (verified via GitHub API)
+
+PUBLISHING RESULT
+- Current main commit: 8f7f9fcf5103c2d60ad4cc1c79ce5bee34965384
+- Current main tree: 3637bb4b9c3af2ea2fd9954496e6d8f1d15b6215
+- Local source tree: 3637bb4b9c3af2ea2fd9954496e6d8f1d15b6215 (exact match)
+- Intended source tree contains 27 files; all 27 remote file blob SHAs were individually verified against the expected source-tree blobs.
+- Publication PR #1 was merged: https://github.com/Logonotobscurity/context-pocket/pull/1
+- Unreviewed bootstrap workflow and redundant base64 source archive were removed from the current main tree in commits 60f084171fa85684545a1c6b9cc44c2dc3d2cefa and 8f7f9fcf5103c2d60ad4cc1c79ce5bee34965384.
+- Note: deleting files from the current tree does not remove those blobs from earlier private Git history. No credentials were identified from the workflow metadata; repository remains private. History rewrite was not performed.
+- The remote has a source-tree snapshot history; the original local Git commit chain is preserved in the downloadable local bundle but was not transplanted onto remote main.
+
+LOCAL CHECKS
+- Python compileall: PASS (context_pocket and tests)
+- pytest: PASS — 36 passed, 6 subtests passed
+- Branch-aware coverage limited to context_pocket source: PASS — 74% total (570 statements, 200 branches, 56 partial branches)
+- Coverage threshold: PASS — 74% >= 70% alpha CI floor
+- Wheel build via `python -m pip wheel . --no-deps --no-build-isolation`: PASS
+  Wheel: context_pocket-0.1.0-py3-none-any.whl; SHA-256 c63cd00d757f0e0d832be8645575710d6c4528234588468365739d242bd3045c
+- Local `python -m build`: NOT VERIFIED — local environment's preinstalled `build` package could not be invoked as a module due to an environment/package shadowing issue. The hosted CI uses a clean virtual environment and installs `build`; its build result is still unverified.
+- Ruff: NOT RUN LOCALLY — Ruff was not installed and package-index network access was unavailable.
+- `pip check`: reports an unrelated pre-existing global environment conflict: moviepy 2.2.1 requires Pillow <12, but Pillow 12.3.0 is installed. The CI workflow now installs ContextPocket and dev tools in an isolated virtual environment.
+- Source-only coverage exposes low coverage for the entry points (`context_pocket/__main__.py` and `mcp_entry.py`); overall CI gate is intentionally alpha-level, not a production-readiness certification.
+
+HOSTED GITHUB ACTIONS
+- Latest observable run: https://github.com/Logonotobscurity/context-pocket/actions/runs/40756038354
+- Conclusion: `startup_failure`; GitHub reports no jobs for the run. Earlier push and PR runs also ended in `startup_failure` before any jobs ran.
+- This is not evidence that tests/lint/build passed or failed; no step-level results were available. Hosted validation remains BLOCKED/UNVERIFIED. Inspect repository Settings > Actions > General and the run details, resolve runner/workflow startup, and rerun CI and CodeQL.
+
+PRODUCTION STATUS
+- NOT APPROVED FOR PRODUCTION. Current implementation is an alpha local-first CLI/MCP MVP.
+- Open gates remain: hosted CI/CodeQL, Ruff and dependency audit evidence, independent security review, fuzz/property tests for import and MCP inputs, OS-specific permission tests, schema migration and restore drills, actual target-client MCP interoperability tests, license/IP decision, and controlled developer research.
+- Keep this repository private until IP ownership, license and product-name clearance are resolved. Do not use real secrets or high-risk personal/client data in this alpha.
