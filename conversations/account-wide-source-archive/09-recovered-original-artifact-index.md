@@ -28,3 +28,8 @@ Two reports are indexed but not copied because they contain a benchmark/referenc
 
 ## Reference meaning
 A Library file ID is a private account reference, not a public web link. A GitHub path is public only after commit and verification. Do not fabricate a URL from an asset title or ID.
+
+
+## Text fidelity and line endings
+
+These recovered artefacts are full-text copies returned by the Library text reader. The reader may normalize line endings (for example, CRLF to LF) and the GitHub text copy is therefore not guaranteed to be byte-identical to the Library binary. No substantive wording was intentionally rewritten. The original Library item remains unchanged and is the byte-level source of truth. The file ID in each entry is the retrieval reference.
