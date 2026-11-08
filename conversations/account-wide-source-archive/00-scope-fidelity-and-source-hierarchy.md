@@ -25,3 +25,8 @@ This archive does not claim that every account conversation or assistant respons
 
 ## Rationale boundary
 Preserve communicated explanations and concise retrospective action rationale only. Do not reproduce hidden private chain-of-thought or internal reasoning traces.
+
+
+## Text-extraction normalization note
+
+The recovered text artefacts were copied from the Library's full-text reader, which can normalize line endings. For example, the two long August pasted-text files were retrieved across all reported pages and line ranges; the difference between their Library byte size and the resulting GitHub byte size is consistent with CRLF-to-LF normalization plus the terminal newline. Their textual content and ordering are preserved, but these Markdown/text copies should not be described as byte-identical binary exports. The untouched Library item remains the canonical original file.
