@@ -67,7 +67,14 @@ Core invariants discussed:
 
 The UI must accurately project system-enforced consent decisions. A visual toggle cannot be the only enforcement point.
 
-## 5. Shared architecture principles
+## 5. Dedicated product records
+
+For fuller product-level context and the distinction between historical reported state and current verification, see:
+- [ContextPocket dossier](./products/context-pocket.md)
+- [Re:Mind Me dossier](./products/remind-me.md)
+- [MorrowVoice dossier](./products/morrowvoice.md)
+
+## 6. Shared architecture principles
 
 - **Ingestion:** preserve provenance, intent, time, source, and confidence.
 - **Normalisation:** standardise records without erasing important wording or uncertainty.
@@ -76,10 +83,10 @@ The UI must accurately project system-enforced consent decisions. A visual toggl
 - **Action:** a remembered commitment or inferred preference does not authorise an external side effect.
 - **Audit:** users need understandable access to provenance, correction, export, and deletion controls.
 
-## 6. Security and privacy risks
+## 7. Security and privacy risks
 
 Cross-tenant retrieval; records exposed beyond authority; inference treated as verified profile data; prompt injection through stored notes; excessive retention; hidden sharing; reminders executed without current approval; and consent UI state diverging from backend enforcement.
 
-## 7. Current synthesis
+## 8. Current synthesis
 
 ContextPocket focuses on agent context infrastructure; Re:Mind Me on personal memory and continuity; MorrowVoice on principal authority, consent, and audit. Shared infrastructure may be reused, but each product requires its own user need, threat model, consent rules, and acceptance criteria.
