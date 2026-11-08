@@ -19,7 +19,8 @@ The existing account-wide-history-and-workstreams folder is a thematic synthesis
 9. [08 — Gaps: unavailable versus never produced](./08-gaps-unavailable-vs-not-produced.md)
 10. [09 — Recovered original-artifact index](./09-recovered-original-artifact-index.md)
 11. [10 — Append-only archival maintenance protocol](./10-append-only-maintenance-protocol.md)
-12. [Recovered original artefacts](./recovered-artifacts/)
+12. [11 — Current source-archive session output and actions](./11-current-source-archive-session-assistant-output-and-actions-2026-11-08.md)
+13. [Recovered original artefacts](./recovered-artifacts/)
 
 ## Library audit
 The recursive Library listing returned 751 items: 742 files and 9 folders. 404 files were marked model-generated. The asset index lists those 404; the full inventory lists all 742 files. The earliest/latest returned file timestamps were 15 May 2025 and 7 November 2026. These are asset dates, not account-conversation boundaries.
