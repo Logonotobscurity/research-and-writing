@@ -1,0 +1,43 @@
+ContextPocket local hardening verification
+Date: 2026-10-28
+Repository target: https://github.com/Logonotobscurity/context-pocket
+Target repository visibility verified via GitHub connector: private
+Remote repository size at last verification: 0 (source not yet uploaded)
+
+Local Git
+- Branch: main
+- Latest commit: 01e2795 chore: harden MVP quality gates and import/export safety
+- Parent: 6f6d416 docs: record standalone repository handoff and remote setup
+- Git working tree: clean
+- Git bundle created: /mnt/data/context-pocket-hardened.bundle
+- Source ZIP created: /mnt/data/context-pocket-hardened-source.zip
+
+Checks run
+- python -m pytest -q: PASS, 36 tests (6 subtests reported)
+- coverage run --branch -m pytest -q: PASS, same 36 tests
+- coverage report --fail-under=80: PASS, 82% total branch-aware coverage
+- python -m unittest discover -s tests -q: PASS, 36 tests
+- python -m compileall -q context_pocket tests: PASS
+- pip wheel --no-deps --no-build-isolation .: PASS, wheel built
+- Fresh venv install of built wheel: PASS
+- Installed `context-pocket --help`: PASS
+- Installed `context-pocket-mcp --help`: PASS
+- git diff --check: PASS before commit
+
+Not run / blockers
+- Ruff lint: NOT RUN locally; Ruff was not installed and package index DNS resolution failed. Hosted CI installs Ruff and runs it after source is pushed.
+- `python -m build`: NOT RUN; build package was unavailable and package index DNS resolution failed. Wheel build was completed using pip wheel.
+- `python -m pip check`: ENVIRONMENT FAILURE unrelated to ContextPocket's declared runtime dependencies: pre-existing environment has moviepy 2.2.1 requiring pillow<12.0, but pillow 12.3.0 is installed.
+- GitHub Actions and CodeQL: NOT RUN; remote repository has no source yet because direct git push failed due `Could not resolve host: github.com` from this execution environment.
+- Remote source upload: BLOCKED by environment DNS. No source files or commits have been uploaded to GitHub by this run.
+- Third-party security audit, MCP conformance certification, Linux/macOS/Windows matrix, and user pilot: NOT completed.
+
+Changes in commit 01e2795
+- Added explicit import file size cap (25 MiB).
+- Export JSON now uses exclusive file creation with restrictive 0600 mode where supported and fsync.
+- Added regression tests for oversized imports, private export permissions, overwrite protection, non-finite confidence, invalid import timestamp, malformed JSON-RPC, and invalid request shape.
+- CI matrix for Python 3.11–3.13 now installs dev tools, runs compile/tests/80% coverage floor/Ruff, CLI smoke checks, dependency consistency, and wheel/sdist build.
+- Added CodeQL workflow and Dependabot configuration.
+- Added production-readiness gates and updated security/contribution documentation.
+
+Important: ContextPocket remains an alpha/MVP and is NOT approved for production or sensitive data. A passing local suite is not a security audit or production-readiness certification.
