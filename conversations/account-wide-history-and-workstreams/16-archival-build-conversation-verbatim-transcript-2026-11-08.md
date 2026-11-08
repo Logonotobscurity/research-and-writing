@@ -64,7 +64,7 @@ The existing record gives me a useful model: six short, sequential documents tha
 **Type:** User-visible commentary
 
 ~~~text
-I’ve confirmed the repository’s current branch is \u0060main\u0060 and created a separate working branch for this archive, so the existing conversation record remains untouched while the new material is assembled. One important boundary will be made explicit in the documents: I can synthesize the account context, saved project history, and recent conversation summaries available here, but I cannot honestly label that as a verbatim export of every historical chat. The archive will state that distinction rather than hide it.
+I’ve confirmed the repository’s current branch is `main` and created a separate working branch for this archive, so the existing conversation record remains untouched while the new material is assembled. One important boundary will be made explicit in the documents: I can synthesize the account context, saved project history, and recent conversation summaries available here, but I cannot honestly label that as a verbatim export of every historical chat. The archive will state that distinction rather than hide it.
 ~~~
 
 ### Message 06 — Assistant's first document-set update
@@ -100,7 +100,7 @@ The cross-cutting pattern is becoming clearer: many projects are different appli
 **Type:** User-visible commentary
 
 ~~~text
-The integrity check confirms the new archive is present and the original six-phase folder remains unchanged. I also detected that \u0060main\u0060 has advanced since I created the working branch, so I’m checking those intervening commits before opening a pull request; I don’t want this archive to overwrite or omit any newer repository work.
+The integrity check confirms the new archive is present and the original six-phase folder remains unchanged. I also detected that `main` has advanced since I created the working branch, so I’m checking those intervening commits before opening a pull request; I don’t want this archive to overwrite or omit any newer repository work.
 ~~~
 
 ### Message 10 — Assistant's discovery of newer repository work
@@ -109,7 +109,7 @@ The integrity check confirms the new archive is present and the original six-pha
 **Type:** User-visible commentary
 
 ~~~text
-The check exposed a repository change made while I was building: \u0060main\u0060 now contains a newer account-wide archive and a separate conversation folder that were added after my working branch was created. That means simply merging my branch would create two competing account-wide indexes. I’m inspecting the newer material and will consolidate into the repository’s existing structure rather than leave you with duplicate archives.
+The check exposed a repository change made while I was building: `main` now contains a newer account-wide archive and a separate conversation folder that were added after my working branch was created. That means simply merging my branch would create two competing account-wide indexes. I’m inspecting the newer material and will consolidate into the repository’s existing structure rather than leave you with duplicate archives.
 ~~~
 
 ### Message 11 — Assistant's decision to extend the canonical archive
@@ -118,7 +118,7 @@ The check exposed a repository change made while I was building: \u0060main\u006
 **Type:** User-visible commentary
 
 ~~~text
-The newer \u0060main\u0060 branch already contains the correct canonical account-wide folder: \u0060conversations/account-wide-history-and-workstreams/\u0060, alongside the focused research-led folder and a separate identity-escalation conversation folder. I’m keeping that arrangement. I’ll add the deeper product dossiers and cross-workstream analysis inside the existing account-wide folder, update its index, and avoid creating a second folder that says essentially the same thing.
+The newer `main` branch already contains the correct canonical account-wide folder: `conversations/account-wide-history-and-workstreams/`, alongside the focused research-led folder and a separate identity-escalation conversation folder. I’m keeping that arrangement. I’ll add the deeper product dossiers and cross-workstream analysis inside the existing account-wide folder, update its index, and avoid creating a second folder that says essentially the same thing.
 ~~~
 
 ### Message 12 — Assistant's pull request update
@@ -127,7 +127,7 @@ The newer \u0060main\u0060 branch already contains the correct canonical account
 **Type:** User-visible commentary
 
 ~~~text
-The archive expansion is now in a draft pull request, with **13 changed files and 1,364 additions**. The branch is based on the latest \u0060main\u0060 and the repository checks confirm that every new dossier and index file is present. GitHub has initially reported the draft as not mergeable, so I’m checking whether that is a temporary status or an actual conflict before I close out the work.
+The archive expansion is now in a draft pull request, with **13 changed files and 1,364 additions**. The branch is based on the latest `main` and the repository checks confirm that every new dossier and index file is present. GitHub has initially reported the draft as not mergeable, so I’m checking whether that is a temporary status or an actual conflict before I close out the work.
 ~~~
 
 ### Message 13 — Assistant's mergeability update
@@ -136,7 +136,7 @@ The archive expansion is now in a draft pull request, with **13 changed files an
 **Type:** User-visible commentary
 
 ~~~text
-The mergeability check is now positive: GitHub has resolved the initial status and reports the pull request as mergeable, with all 13 changed files listed and patches available. Since this is a documentation-only expansion of the folder you asked me to create, I’m taking it through the final merge step so it becomes part of \u0060main\u0060, then I’ll verify the published paths.
+The mergeability check is now positive: GitHub has resolved the initial status and reports the pull request as mergeable, with all 13 changed files listed and patches available. Since this is a documentation-only expansion of the folder you asked me to create, I’m taking it through the final merge step so it becomes part of `main`, then I’ll verify the published paths.
 ~~~
 
 ### Message 14 — Assistant's final response after the first archive expansion
@@ -146,9 +146,9 @@ The mergeability check is now positive: GitHub has resolved the initial status a
 **Order:** Last assistant response before the user's subsequent verbatim-recovery request
 
 ~~~markdown
-Completed and merged into \u0060main\u0060.
+Completed and merged into `main`.
 
-I inspected the repository's existing conversation structure and extended its canonical account-wide archive rather than creating a competing folder. The existing \u0060research-led-systems-builder\u0060 and \u0060identity-escalation-attention-hooks\u0060 folders remain intact.
+I inspected the repository's existing conversation structure and extended its canonical account-wide archive rather than creating a competing folder. The existing `research-led-systems-builder` and `identity-escalation-attention-hooks` folders remain intact.
 
 <badge color="success">Merged successfully</badge> **Pull Request [#1](https://github.com/Logonotobscurity/research-and-writing/pull/1)**
 
@@ -207,7 +207,7 @@ This turns the recorded gaps into practical priorities: improve archival provena
 
 ## Verification
 
-The merge was successful. I also fetched the key documents from \u0060main\u0060 after merging and confirmed that the new product records, archive index, synthesis, and research agenda are present.
+The merge was successful. I also fetched the key documents from `main` after merging and confirmed that the new product records, archive index, synthesis, and research agenda are present.
 
 One important qualification: this is a substantial reconstruction from the conversation context, saved project history, and repository material available to me—not a verbatim export of every message ever exchanged on the account. The documents make that limitation explicit and distinguish reported project status from independently verified implementation.
 
