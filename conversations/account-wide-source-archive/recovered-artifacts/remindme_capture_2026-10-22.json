@@ -1,0 +1,112 @@
+{
+  "package_type": "Re:Mind Me daily memory capture",
+  "report_date": "2026-10-22",
+  "captured_at": "2026-10-22T06:07:00+01:00",
+  "timezone": "Africa/Lagos",
+  "schema_version": "pending-canonical-schema",
+  "schema_note": "The canonical shared schema/version and enumerations were not available in this session. Records are locally staged drafts and should be validated before remote ingestion.",
+  "delivery": {
+    "destination": "ReMindMe_Automation_Inbox",
+    "status": "not_written",
+    "reason": "No authorized writable destination was available in this session; no remote write was attempted.",
+    "confirmed_records_written": 0,
+    "records_staged_locally": 6
+  },
+  "source_coverage": {
+    "sources_reviewed": [
+      "Current ChatGPT conversation user message",
+      "Partial recent-conversation summary for 'Architecture specification' dated 2026-10-22"
+    ],
+    "limitations": [
+      "No complete cross-platform conversation history was accessible.",
+      "No independent external research was performed.",
+      "The platform scheduling claims in the recent summary were treated as a proposal, not independently verified research."
+    ]
+  },
+  "events": [
+    {
+      "event_id": "RM-20261022-0607-001",
+      "schema_version": "pending-canonical-schema",
+      "event_type": "workflow_definition",
+      "source_platform": "ChatGPT",
+      "occurred_at": "2026-10-22T06:07:00+01:00",
+      "timezone": "Africa/Lagos",
+      "project": "Re:Mind Me",
+      "title": "Defined daily memory and task capture workflow",
+      "summary": "A repeatable workflow was provided to review accessible session context and authorized sources, identify meaningful work, separate completed actions from proposals, create structured records, prepare a daily report, and disclose coverage and delivery status.",
+      "status": "draft_pending_destination_write",
+      "source_reference": "Current ChatGPT conversation — user message containing 'Re:Mind Me Daily Memory & Task Capture' (2026-10-22)",
+      "approval_status": "user_provided_for_local_capture; external_delivery_pending"
+    },
+    {
+      "event_id": "RM-20261022-0607-002",
+      "schema_version": "pending-canonical-schema",
+      "event_type": "decision",
+      "source_platform": "ChatGPT",
+      "occurred_at": "2026-10-22T06:07:00+01:00",
+      "timezone": "Africa/Lagos",
+      "project": "Re:Mind Me",
+      "title": "Standardized event fields and idempotent retries",
+      "summary": "Each meaningful event should use the shared record fields: event_id, schema_version, event_type, source_platform, occurred_at, timezone, project, title, summary, status, source_reference, and approval_status. The same event_id must be reused when retrying a record. The actual canonical schema/version was not available in this session, so these local records are drafts.",
+      "status": "draft_pending_schema_confirmation_and_destination_write",
+      "source_reference": "Current ChatGPT conversation — user message containing 'Re:Mind Me Daily Memory & Task Capture' (2026-10-22)",
+      "approval_status": "user_provided_for_local_capture; external_delivery_pending"
+    },
+    {
+      "event_id": "RM-20261022-0607-003",
+      "schema_version": "pending-canonical-schema",
+      "event_type": "decision",
+      "source_platform": "ChatGPT",
+      "occurred_at": "2026-10-22T06:07:00+01:00",
+      "timezone": "Africa/Lagos",
+      "project": "Re:Mind Me",
+      "title": "Require a daily document and Daily Reports worksheet row",
+      "summary": "The daily workflow should produce a report covering summary, completed work, decisions, research and learning, outstanding tasks, upcoming commitments, blockers, and proposed next actions, and add a corresponding row to a worksheet named Daily Reports.",
+      "status": "local_artifact_prepared_remote_write_pending",
+      "source_reference": "Current ChatGPT conversation — user message containing 'Re:Mind Me Daily Memory & Task Capture' (2026-10-22)",
+      "approval_status": "user_provided_for_local_capture; external_delivery_pending"
+    },
+    {
+      "event_id": "RM-20261022-0607-004",
+      "schema_version": "pending-canonical-schema",
+      "event_type": "constraint",
+      "source_platform": "ChatGPT",
+      "occurred_at": "2026-10-22T06:07:00+01:00",
+      "timezone": "Africa/Lagos",
+      "project": "Re:Mind Me",
+      "title": "Capture only evidence available to each automation",
+      "summary": "A scheduled task must use only the conversations and connected sources actually available to it. Daily rollups should summarize captured event records rather than fabricate a reconstruction of inaccessible conversations or actions.",
+      "status": "captured_locally_pending_destination_write",
+      "source_reference": "Current ChatGPT conversation — user message containing 'Re:Mind Me Daily Memory & Task Capture' (2026-10-22)",
+      "approval_status": "user_provided_for_local_capture; external_delivery_pending"
+    },
+    {
+      "event_id": "RM-20261022-0607-005",
+      "schema_version": "pending-canonical-schema",
+      "event_type": "governance_requirement",
+      "source_platform": "ChatGPT",
+      "occurred_at": "2026-10-22T06:07:00+01:00",
+      "timezone": "Africa/Lagos",
+      "project": "Re:Mind Me",
+      "title": "Require traceability and verified write acknowledgements",
+      "summary": "The workflow must not expose credentials, unnecessarily copy sensitive data, act outside the authorized scope, or claim delivery without confirmation from the destination. It must preserve traceable record identifiers and disclose unsuccessful writes.",
+      "status": "captured_locally_pending_destination_write",
+      "source_reference": "Current ChatGPT conversation — user message containing 'Re:Mind Me Daily Memory & Task Capture' (2026-10-22)",
+      "approval_status": "user_provided_for_local_capture; external_delivery_pending"
+    },
+    {
+      "event_id": "RM-20261022-0607-006",
+      "schema_version": "pending-canonical-schema",
+      "event_type": "architecture_proposal",
+      "source_platform": "ChatGPT",
+      "occurred_at": "2026-10-22T06:07:00+01:00",
+      "timezone": "Africa/Lagos",
+      "project": "Re:Mind Me",
+      "title": "Use platform-native schedules with Zapier as integration layer",
+      "summary": "A proposal in the available recent-conversation summary describes using each AI platform's scheduler to run its own capture/report task and Zapier as an integration layer to collect standardized outputs for Re:Mind Me. This remains a proposal; no scheduler or Zapier flow was configured in this run.",
+      "status": "proposed_not_implemented",
+      "source_reference": "Recent conversation summary — 'Architecture specification' (2026-10-22; partial summary available in current context)",
+      "approval_status": "proposal_only; not_approved_as_completed_work"
+    }
+  ]
+}
