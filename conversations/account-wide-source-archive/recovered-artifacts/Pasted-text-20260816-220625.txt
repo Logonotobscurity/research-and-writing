@@ -1,0 +1,2682 @@
+Base in experience and our conversation so far i will provide you a code kindly use the exat design style in Hero but creative on ther section to design yohr most advanced aand business and cisumer and solution driven platform from all we discussed for all social ctions and pages and all screen dimesions and use monochrome and, pill button style carousels, scrolls reveal, and cards reveal, multi-modal header style and compliants standads and  clean code and boundaries also orooer routings : kindly use visual from cod : ```index.tsx
+import "./index.css";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { App } from "./App";
+
+const rootEl = document.getElementById("root");
+if (rootEl) {
+  ReactDOM.createRoot(rootEl).render(<App />);
+}
+
+```
+```App.tsx
+import React from 'react'
+import { Demo } from './components/Demo'
+import { AutomergeIllustration } from './components/AutomergeIllustration'
+import { MultiplayerMark, OfflineMark } from './components/GlyphIcons'
+import { illustrationFeatures } from './data/features'
+
+const section = 'mx-auto max-w-[1152px] px-[22px]'
+const h2 = '[font-weight:280] text-4xl leading-[50.4px] [text-wrap:balance]'
+const blurbTitle = 'm-0 font-sans text-base font-extrabold leading-6'
+const blurbBody = 'm-0 font-sans text-base font-medium leading-6'
+
+const teamPhotos = [
+  {
+    src: 'https://cdn.magicpatterns.com/patterns/generated-images/91de48f6-3951-4454-a40c-b182a22d6494.jpg',
+    alt: 'A dithered, retro-inspired photo of Martin Kleppmann, Peter van Hardenberg, and Orion Henry clustered around laptops, with looks of intense concentration on their faces.',
+  },
+  {
+    src: 'https://cdn.magicpatterns.com/patterns/generated-images/ebb1f0aa-ad44-449b-8e6d-a32d2da17cb1.jpg',
+    alt: 'Another photo, this one looking through a window at Brooklyn Zelenka and Alex Good, who are collaborating on a design by writing notes on the window with a special pen. Again, the photo is dithered with big 1-bit black-and-white pixels.',
+  },
+]
+
+export function App() {
+  return (
+    <main className="w-full bg-amber font-sans text-base leading-6 text-ink">
+      <section id="tag" className={`${section} mb-12`}>
+        <h1 className="m-0 mb-4 text-center text-5xl font-extralight leading-none [text-wrap:balance]">
+          Version control for your data.
+        </h1>
+        <h2 className={`${h2} text-center`}>
+          Automerge is a local-first sync engine for multiplayer apps that works offline, prevents conflicts, and runs
+          fast.
+        </h2>
+      </section>
+
+      <Demo />
+
+      <h2 className={`${h2} text-center`}>Distributed systems done properly.</h2>
+
+      <section id="illustration" className={`${section} relative mt-4 fill-ink text-base`}>
+        <AutomergeIllustration className="mx-[298px] block h-[1856px]" />
+
+        {illustrationFeatures.map((feature) => (
+          <div
+            key={feature.title}
+            className={
+              feature.side === 'left'
+                ? 'absolute left-8 right-[576px] mr-64 max-w-[288px]'
+                : 'absolute left-[576px] ml-64 max-w-[288px]'
+            }
+            style={{ top: feature.top }}
+          >
+            {feature.title === 'Multiplayer' && (
+              <MultiplayerMark aria-hidden="true" className="mb-4 -ml-4 h-[72px]" />
+            )}
+            <h4 className={blurbTitle}>{feature.title}</h4>
+            <p className={blurbBody}>{feature.body}</p>
+            {feature.title === 'Offline' && (
+              <OfflineMark aria-hidden="true" className="absolute right-0 top-24 h-20" />
+            )}
+          </div>
+        ))}
+      </section>
+
+      <div className="bg-ink text-amber">
+        <section id="devs" className={`${section} mt-24 py-24`}>
+          <h2 className={`${h2} mb-[72px] text-center`}>
+            Automerge works with your existing stack.
+            <br />
+            Drop it in where you need it.
+          </h2>
+
+          <div className="grid grid-cols-[352px_352px] justify-center gap-20">
+            <div>
+              <h4 className={blurbTitle}>Compatible</h4>
+              <p className={blurbBody}>
+                Works with{' '}
+                <a href="/docs/tutorial/react/" className="text-amber underline-offset-2 hover:underline">
+                  React
+                </a>{' '}
+                and other frameworks out of the box. Plugins for{' '}
+                <a
+                  href="https://github.com/automerge/automerge-prosemirror"
+                  className="text-amber underline-offset-2 hover:underline"
+                >
+                  Prosemirror
+                </a>
+                ,{' '}
+                <a
+                  href="https://github.com/automerge/automerge-codemirror"
+                  className="text-amber underline-offset-2 hover:underline"
+                >
+                  Codemirror
+                </a>
+                , and more.
+              </p>
+            </div>
+
+            <div>
+              <h4 className={blurbTitle}>Network</h4>
+              <p className={blurbBody}>
+                Peer-to-peer, client-server, files on disk, email attachments… if you can transfer bytes, you can sync
+                documents.
+              </p>
+            </div>
+
+            <div>
+              <h4 className={blurbTitle}>Language</h4>
+              <p className={blurbBody}>
+                Built for{' '}
+                <a
+                  href="/docs/reference/library-initialization/"
+                  className="text-amber underline-offset-2 hover:underline"
+                >
+                  Javascript
+                </a>{' '}
+                and{' '}
+                <a href="https://docs.rs/automerge/latest/automerge/" className="text-amber underline-offset-2 hover:underline">
+                  Rust
+                </a>
+                , with ports or bindings for{' '}
+                <a
+                  href="https://github.com/automerge/automerge-swift"
+                  className="text-amber underline-offset-2 hover:underline"
+                >
+                  Swift
+                </a>
+                ,{' '}
+                <a href="https://github.com/automerge/automerge-py" className="text-amber underline-offset-2 hover:underline">
+                  Python
+                </a>
+                ,{' '}
+                <a
+                  href="https://github.com/automerge/automerge/tree/main/rust/automerge-c"
+                  className="text-amber underline-offset-2 hover:underline"
+                >
+                  C
+                </a>
+                ,{' '}
+                <a
+                  href="https://github.com/automerge/automerge-java"
+                  className="text-amber underline-offset-2 hover:underline"
+                >
+                  Java
+                </a>
+                , and more.
+              </p>
+            </div>
+
+            <div>
+              <h4 className={blurbTitle}>Backend</h4>
+              <p className={blurbBody}>
+                Works with whatever backend you already have. Or, use{' '}
+                <a href="/docs/reference/repositories/" className="text-amber underline-offset-2 hover:underline">
+                  Automerge Repo
+                </a>
+                , which comes with a sync server backend out-of-the-box. No proprietary infrastructure — you own your
+                stack.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div className="bg-char text-cream">
+        <section
+          id="team"
+          className={`${section} grid grid-cols-[631.156px_444.844px] items-start gap-x-8 gap-y-16 pb-4 pt-24`}
+        >
+          <div>
+            <h2 className={`${h2} m-[-8px_0_8px] text-left`}>The team behind Automerge.</h2>
+
+            <p className="mb-4">
+              For more than a decade, Automerge has been an independent open source project built by a serious,
+              dedicated team of engineers and computer scientists. That team includes production engineers who
+              cofounded Heroku, and computer scientists like renowned Cambridge professor Martin Kleppmann. We plan for
+              the long-term, and think about where the project will be in a decade, not how to get through the next
+              funding round.
+            </p>
+
+            <p className="mb-4">
+              We are driven to build high performance, reliable software you can bet your project on. We develop
+              rigorous academic proofs of our designs using theorem proving tools like Isabelle, and implement them
+              using cutting edge performance techniques adopted from the database world. Our standard is to be both
+              fast and correct.
+            </p>
+
+            <p className="mb-4">
+              Our ongoing effort is supported by a variety of different groups. Industrial research lab{' '}
+              <a href="https://www.inkandswitch.com/" className="text-cream underline-offset-2 hover:underline">
+                Ink &amp; Switch
+              </a>{' '}
+              provides a baseline of full-time engineering staff, including lead maintainer Alex Good, Orion Henry,
+              Brooklyn Zelenka, and John Mumm. We are also supported by open source sponsorship from partners like
+              Fly.io and Prisma, support contracts and feature development funding from users like GoodNotes and
+              Bowtie, and philanthropic funding from groups like NLNet, the Advanced Research + Invention Agency, and
+              the Endless Foundation.
+            </p>
+
+            <p className="mb-4">
+              We are also grateful to all the{' '}
+              <a href="/community" className="text-cream underline-offset-2 hover:underline">
+                members of our community
+              </a>{' '}
+              who write new libraries and integrations, contribute to the core repositories, or share their experiences
+              building with Automerge. We maintain a list of{' '}
+              <a href="/contributors" className="text-cream underline-offset-2 hover:underline">
+                open source contributors
+              </a>
+              , and invite you to join them.
+            </p>
+          </div>
+
+          <div className="flex flex-row flex-wrap gap-4">
+            {teamPhotos.map((photo) => (
+              <img
+                key={photo.src}
+                src={photo.src}
+                alt={photo.alt}
+                className="h-[295.375px] w-[444.844px] object-cover align-middle"
+              />
+            ))}
+          </div>
+        </section>
+      </div>
+
+      <footer className="relative bg-char px-4 pb-12 pt-8 text-center text-cream">
+        <div className="mb-2 block">
+          {[0, 1, 2].map((i) => (
+            <i key={i} className="mx-[4.8px] inline-block h-2 w-2 rotate-45 rounded-[2px] bg-cream" />
+          ))}
+        </div>
+        Copyright © <span id="copyright-year">2026</span> Automerge contributors.
+      </footer>
+    </main>
+  )
+}
+
+```
+```package.json
+{
+  "name": "magic-patterns-project",
+  "private": true,
+  "dependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-router-dom": "6.30.2",
+    "lucide-react": "0.577.0",
+    "framer-motion": "11.18.2",
+    "@radix-ui/react-icons": "1.3.2",
+    "date-fns": "4.1.0",
+    "tailwind-merge": "2.6.1"
+  }
+}
+
+```
+```index.css
+/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@100..900&family=Overpass+Mono:wght@300..700&display=swap');
+
+/* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+:root {
+  --fg: #222222;
+  --bg: #ffcc33;
+}
+svg {
+  max-width: 100%;
+  vertical-align: middle;
+}
+/* Pixel-dotted texture used on the demo chrome */
+.am-dots {
+  background-image: url("data:image/svg+xml,<svg fill='%23222' xmlns='http://www.w3.org/2000/svg'><circle cx='1' cy='1' r='.5'/><circle cx='3' cy='3' r='.5'/></svg>");
+  background-size: 4px 4px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+}
+.am-lights {
+  background-image: radial-gradient(#ffcc33 3px, #222 3.25px, #222 5px, rgba(0, 0, 0, 0) 5.25px);
+  background-size: 15px;
+  image-rendering: pixelated;
+}
+/* Shared stroke language for the large Automerge illustration */
+.am-art * {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+.am-art rect,
+.am-art polyline {
+  stroke: var(--fg);
+  stroke-width: 2px;
+}
+.am-art polyline {
+  fill: none;
+}
+.am-art .s2 {
+  fill: none;
+  stroke: var(--fg);
+  stroke-width: 2px;
+}
+.am-art .s3 {
+  fill: none;
+  stroke: var(--fg);
+  stroke-width: 3px;
+}
+.am-art .fy {
+  fill: var(--bg);
+  stroke: var(--fg);
+  stroke-width: 2px;
+}
+.am-art .sy6 {
+  fill: none;
+  stroke: var(--bg);
+  stroke-width: 6px;
+}
+.am-art .ry {
+  fill: var(--bg);
+}
+.am-art .rn {
+  fill: none;
+}
+
+```
+```tailwind.config.js
+export default {
+  theme: {
+    extend: {
+      colors: {
+        ink: '#222222',
+        amber: '#ffcc33',
+        char: '#33322e',
+        cream: '#fcfcfc',
+      },
+      fontFamily: {
+        sans: ['Overpass', 'sans-serif'],
+        mono: ['"Overpass Mono"', 'monospace'],
+      },
+    },
+  },
+}
+
+```
+```components/GlyphIcons.tsx
+import React from 'react'
+
+type GlyphProps = React.SVGProps<SVGSVGElement>
+
+/** Avatar glyph for a peer that is online but idle (circle, inner circle, slash). */
+export function PeerAlex(props: GlyphProps) {
+  return (
+    <svg
+      viewBox="0 0 34 34"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      stroke="var(--fg)"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      {...props}
+    >
+      <circle cx="17" cy="17.1412" r="8" />
+      <circle cx="17" cy="17" r="16" />
+      <path d="m3.8068 7.948 22.2447 22.2447" />
+    </svg>
+  )
+}
+
+/** Avatar glyph for a peer that is online and active. */
+export function PeerBrooke(props: GlyphProps) {
+  return (
+    <svg
+      viewBox="0 0 34 34"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      stroke="var(--fg)"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      {...props}
+    >
+      <circle cx="17" cy="17" r="16" />
+      <path d="m17 1v6c0 5.5228-4.4772 10-10 10h-6" />
+      <path d="m17 1v6c0 5.5228 4.4772 10 10 10h6" />
+      <path d="m17 33v-6c0-5.5228-4.4772-10-10-10h-6" />
+      <path d="m17 33v-6c0-5.5228 4.4772-10 10-10h6" />
+    </svg>
+  )
+}
+
+/** Avatar glyph for a peer that has gone offline (dashed). */
+export function PeerOrion(props: GlyphProps) {
+  return (
+    <svg
+      viewBox="0 0 34 34"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      strokeDasharray="1 4"
+      stroke="var(--fg)"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      {...props}
+    >
+      <circle cx="17" cy="17" r="16" />
+      <path d="m2.4607 23.6804 6.5393-6.5393v-6c0-1.1046.8954-2 2-2h12c1.1046 0 2 .8954 2 2v6l6.5407 6.5407" />
+      <path d="m17 9.1412v23.8588" />
+    </svg>
+  )
+}
+
+/** Comet + peer illustration that sits above the "Multiplayer" blurb. */
+export function MultiplayerMark(props: GlyphProps) {
+  return (
+    <svg
+      height="72"
+      viewBox="0 0 96 72"
+      width="96"
+      xmlns="http://www.w3.org/2000/svg"
+      stroke="var(--fg)"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      {...props}
+    >
+      <path
+        fill="var(--fg)"
+        d="m24.9706 28.4853c2.2848-2.2848 4.9169-4.0082 7.725-5.179l-24.6956-11.7916s6.1567 12.8943 11.7915 24.6956c1.1708-2.8081 2.8943-5.4403 5.179-7.725z"
+      />
+      <g fill="none">
+        <circle cx="41.9411" cy="45.597" r="8" />
+        <circle cx="41.9411" cy="45.4558" r="16" />
+        <path d="m28.7479 36.4038 22.2448 22.2447" />
+        <path d="m32.275 12.4853h16" />
+        <path d="m48.275 20.4853h16" />
+        <path d="m64.275 28.4853h16" />
+        <path d="m72.275 36.4853h16" />
+      </g>
+    </svg>
+  )
+}
+
+/** Comet + speech-bubble illustration that sits beside the "Offline" blurb. */
+export function OfflineMark(props: GlyphProps) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="120"
+      height="80"
+      stroke="var(--fg)"
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      {...props}
+    >
+      <path
+        fill="var(--fg)"
+        d="M25.5 39.03a23.92 23.92 0 0 1 7.725-5.18L8.529 22.06l11.792 24.695A23.92 23.92 0 0 1 25.5 39.03z"
+      />
+      <circle cx="42.471" cy="56" r="16" />
+      <path d="M66.47 40v-8h-4a4 4 0 0 1-4-4V12a4 4 0 0 1 4-4h45a4 4 0 0 1 4 4v16a4 4 0 0 1-4 4h-33l-8 8z M27.931 62.68l6.54-6.539v-6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v6l6.54 6.54 M42.471 48.141L42.471 72" />
+      <text stroke="none" fill="var(--fg)" fontWeight="600" fontSize="14">
+        <tspan dx="67" dy="24">
+          hello!
+        </tspan>
+      </text>
+    </svg>
+  )
+}
+
+```
+```components/AutomergeIllustration.tsx
+import React from 'react'
+
+/**
+ * The full 512 × 1856 Automerge behaviour illustration.
+ * Stroke language is defined once in index.css under `.am-art`.
+ */
+
+type Pt = [number, number, string]
+
+const rot = (t: string, deg = 45) => `translate(${t}) rotate(${deg})`
+
+/** 4.97px changeset pip. */
+const Sq = ({ x, y, t, c }: { x: number; y: number; t: string; c?: string }) => (
+  <rect x={x} y={y} width="4.9706" height="4.9706" rx="1.2426" ry="1.2426" transform={rot(t)} className={c} />
+)
+
+/** 49.94px changeset diamond. */
+const Ch = ({ x, y, t }: { x: number; y: number; t: string }) => (
+  <rect x={x} y={y} width="49.9411" height="49.9411" rx="8" ry="8" transform={rot(t)} className="ry" />
+)
+
+/** 12.51px document pip. */
+const Dm = ({ x, y, t, c = '', deg = 45 }: { x: number; y: number; t: string; c?: string; deg?: number }) => (
+  <rect x={x} y={y} width="12.5148" height="12.5148" rx="2.0503" ry="2.0503" transform={rot(t, deg)} className={c} />
+)
+
+/** 24.97px task diamond. */
+const Tk = ({ x, y, t }: { x: number; y: number; t: string }) => (
+  <rect x={x} y={y} width="24.9706" height="24.9706" rx="4" ry="4" transform={rot(t)} className="ry" />
+)
+
+/** 1.41px dot inside a task diamond. */
+const Dt = ({ x, y, t }: { x: number; y: number; t: string }) => (
+  <rect x={x} y={y} width="1.4142" height="1.4142" transform={rot(t)} className="rn" />
+)
+
+const PersonGlyph = ({ dy = 0 }: { dy?: number }) => (
+  <g transform={`translate(0,${dy})`}>
+    <circle cx="96" cy="96" r="64" className="s2" />
+    <line x1="43.2272" y1="59.7918" x2="132.2061" y2="148.7707" className="s2" />
+    <path
+      d="M152.0104,65.0108c-2.5601-.6598-5.2443-1.0108-8.0104-1.0108-17.6731,0-32,14.3269-32,32s14.3269,32,32,32c2.7614,0,5.4411-.3498,7.9973-1.0074"
+      className="s2"
+    />
+    <circle cx="64" cy="96" r="32" className="s2" />
+    <circle cx="144" cy="96" r="16" className="s2" />
+    <circle cx="96" cy="48" r="16" className="s2" />
+    <path d="M60.7947,64.1585c5.3274-5.6924,12.0415-10.0708,19.6036-12.5964" className="s2" />
+    <path
+      d="M132.6829,125.9401c-8.6871,11-22.1429,18.0599-37.2475,18.0599-14.2794,0-27.0852-6.3095-35.7815-16.2927"
+      className="s2"
+    />
+    <path d="M111.5143,51.9237c7.9993,2.8817,15.001,7.8523,20.347,14.2537" className="s2" />
+  </g>
+)
+
+const DocGlyph = ({ dy = 0 }: { dy?: number }) => (
+  <g transform={`translate(0,${dy})`}>
+    <rect x="216" y="56" width="80" height="80" rx="8" ry="8" className="rn" />
+    <path d="M256,32c35.3462,0,64,28.6538,64,64,0,35.3462-28.6538,64-64,64-35.3462,0-64-28.6538-64-64s28.6538-64,64-64Z" className="s2" />
+    <path d="M256,32v24c0,22.0914-17.9086,40-40,40h-24" className="s2" />
+    <path d="M256,32v24c0,22.0914,17.9086,40,40,40h24" className="s2" />
+    <path d="M256,160v-24c0-22.0914-17.9086-40-40-40h-24" className="s2" />
+    <path d="M256,160v-24c0-22.0914,17.9086-40,40-40h24" className="s2" />
+  </g>
+)
+
+const CHANGESETS: { big: [number, number, string]; pips: Pt[] }[] = [
+  {
+    big: [71.0294, 711.0294, '548.5483 147.6872'],
+    pips: [
+      [93.5147, 717.5147, '537.2346 143.0009'],
+      [101.5147, 725.5147, '545.2346 139.6872'],
+      [93.5147, 733.5147, '548.5483 147.6872'],
+      [109.5147, 733.5147, '553.2346 136.3734'],
+      [85.5147, 725.5147, '540.5483 151.0009'],
+      [77.5147, 733.5147, '543.862 159.0009'],
+    ],
+  },
+  {
+    big: [231.0294, 711.0294, '595.4113 34.5501'],
+    pips: [
+      [253.5147, 717.5147, '584.0975 29.8638'],
+      [261.5147, 725.5147, '592.0975 26.5501'],
+      [253.5147, 733.5147, '595.4113 34.5501'],
+      [269.5147, 733.5147, '600.0975 23.2364'],
+      [245.5147, 725.5147, '587.4113 37.8638'],
+      [237.5147, 733.5147, '590.725 45.8638'],
+    ],
+  },
+  {
+    big: [391.0294, 711.0294, '642.2742 -78.587'],
+    pips: [
+      [405.5147, 741.5147, '645.5879 -70.587'],
+      [413.5147, 749.5147, '653.5879 -73.9007'],
+      [421.5147, 741.5147, '650.2742 -81.9007'],
+    ],
+  },
+  {
+    big: [71.0294, 903.0294, '684.3128 203.9227'],
+    pips: [
+      [93.5147, 909.5147, '672.9991 199.2364'],
+      [101.5147, 917.5147, '680.9991 195.9227'],
+      [93.5147, 925.5147, '684.3128 203.9227'],
+      [85.5147, 933.5147, '687.6266 211.9227'],
+      [93.5147, 941.5147, '695.6266 208.6089'],
+      [101.5147, 933.5147, '692.3128 200.6089'],
+      [109.5147, 925.5147, '688.9991 192.6089'],
+      [85.5147, 917.5147, '676.3128 207.2364'],
+      [77.5147, 925.5147, '679.6266 215.2364'],
+    ],
+  },
+  {
+    big: [231.0294, 903.0294, '731.1758 90.7856'],
+    pips: [
+      [253.5147, 909.5147, '719.862 86.0993'],
+      [261.5147, 917.5147, '727.862 82.7856'],
+      [253.5147, 925.5147, '731.1758 90.7856'],
+      [245.5147, 933.5147, '734.4895 98.7856'],
+      [253.5147, 941.5147, '742.4895 95.4719'],
+      [261.5147, 933.5147, '739.1758 87.4719'],
+      [269.5147, 925.5147, '735.862 79.4719'],
+      [245.5147, 917.5147, '723.1758 94.0993'],
+      [237.5147, 925.5147, '726.4895 102.0993'],
+    ],
+  },
+  {
+    big: [391.0294, 903.0294, '778.0387 -22.3515'],
+    pips: [
+      [405.5147, 933.5147, '781.3524 -14.3515'],
+      [413.5147, 941.5147, '789.3524 -17.6652'],
+      [421.5147, 933.5147, '786.0387 -25.6652'],
+    ],
+  },
+  {
+    big: [71.0294, 1095.0294, '820.0773 260.1582'],
+    pips: [
+      [93.5147, 1101.5147, '808.7636 255.4719'],
+      [101.5147, 1109.5147, '816.7636 252.1582'],
+      [93.5147, 1117.5147, '820.0773 260.1582'],
+      [85.5147, 1125.5147, '823.3911 268.1582'],
+      [93.5147, 1133.5147, '831.3911 264.8444'],
+      [101.5147, 1125.5147, '828.0773 256.8444'],
+      [109.5147, 1117.5147, '824.7636 248.8444'],
+      [85.5147, 1109.5147, '812.0773 263.4719'],
+      [77.5147, 1117.5147, '815.3911 271.4719'],
+    ],
+  },
+  {
+    big: [231.0294, 1095.0294, '866.9403 147.0211'],
+    pips: [
+      [253.5147, 1101.5147, '855.6266 142.3348'],
+      [261.5147, 1109.5147, '863.6266 139.0211'],
+      [253.5147, 1117.5147, '866.9403 147.0211'],
+      [245.5147, 1125.5147, '870.254 155.0211'],
+      [253.5147, 1133.5147, '878.254 151.7074'],
+      [261.5147, 1125.5147, '874.9403 143.7074'],
+      [269.5147, 1117.5147, '871.6266 135.7074'],
+      [245.5147, 1109.5147, '858.9403 150.3348'],
+      [237.5147, 1117.5147, '862.254 158.3348'],
+    ],
+  },
+  {
+    big: [391.0294, 1095.0294, '913.8032 33.884'],
+    pips: [
+      [413.5147, 1101.5147, '902.4895 29.1977'],
+      [421.5147, 1109.5147, '910.4895 25.884'],
+      [413.5147, 1117.5147, '913.8032 33.884'],
+      [405.5147, 1125.5147, '917.1169 41.884'],
+      [413.5147, 1133.5147, '925.1169 38.5703'],
+      [421.5147, 1125.5147, '921.8032 30.5703'],
+      [429.5147, 1117.5147, '918.4895 22.5703'],
+      [405.5147, 1109.5147, '905.8032 37.1977'],
+      [397.5147, 1117.5147, '909.1169 45.1977'],
+    ],
+  },
+]
+
+const DOC_PIPS_DARK: Pt[] = [
+  [249.7426, 1225.7426, '946.1362 179.8251'],
+  [121.7426, 1417.7426, '1044.4104 326.5703'],
+  [313.7426, 1353.7426, '1055.3911 172.0606'],
+  [265.7426, 1369.7426, '1052.6459 210.688'],
+  [233.7426, 1369.7426, '1043.2733 233.3154'],
+  [265.7426, 1401.7426, '1075.2733 220.0606'],
+  [233.7426, 1401.7426, '1065.9007 242.688'],
+  [361.7426, 1401.7426, '1103.3911 152.1784'],
+  [265.7426, 1497.7426, '1143.1556 248.1784'],
+  [233.7426, 1497.7426, '1133.783 270.8058'],
+  [265.7426, 1529.7426, '1165.783 257.5509'],
+  [233.7426, 1529.7426, '1156.4104 280.1784'],
+  [313.7426, 1417.7426, '1100.6459 190.8058'],
+  [313.7426, 1449.7426, '1123.2733 200.1784'],
+  [313.7426, 1481.7426, '1145.9007 209.5509'],
+]
+
+const DOC_PIPS_LIGHT: Pt[] = [
+  [265.7426, 1241.7426, '962.1362 173.1977'],
+  [281.7426, 1257.7426, '978.1362 166.5703'],
+  [233.7426, 1241.7426, '952.7636 195.8251'],
+  [217.7426, 1257.7426, '959.3911 211.8251'],
+  [249.7426, 1289.7426, '991.3911 198.5703'],
+  [121.7426, 1353.7426, '999.1556 307.8251'],
+  [105.7426, 1369.7426, '1005.783 323.8251'],
+  [137.7426, 1401.7426, '1037.783 310.5703'],
+  [105.7426, 1401.7426, '1028.4104 333.1977'],
+  [217.7426, 1321.7426, '1004.6459 230.5703'],
+  [185.7426, 1289.7426, '972.6459 243.8251'],
+  [169.7426, 1305.7426, '979.2733 259.8251'],
+  [201.7426, 1337.7426, '1011.2733 246.5703'],
+  [153.7426, 1321.7426, '985.9007 275.8251'],
+  [185.7426, 1353.7426, '1017.9007 262.5703'],
+  [313.7426, 1289.7426, '1010.1362 153.3154'],
+  [329.7426, 1305.7426, '1026.1362 146.688'],
+  [345.7426, 1321.7426, '1042.1362 140.0606'],
+  [281.7426, 1321.7426, '1023.3911 185.3154'],
+  [297.7426, 1337.7426, '1039.3911 178.688'],
+  [169.7426, 1433.7426, '1069.783 297.3154'],
+  [185.7426, 1449.7426, '1085.783 290.688'],
+  [201.7426, 1465.7426, '1101.783 284.0606'],
+  [153.7426, 1449.7426, '1076.4104 313.3154'],
+  [169.7426, 1465.7426, '1092.4104 306.688'],
+  [185.7426, 1481.7426, '1108.4104 300.0606'],
+  [281.7426, 1385.7426, '1068.6459 204.0606'],
+  [249.7426, 1353.7426, '1036.6459 217.3154'],
+  [249.7426, 1385.7426, '1059.2733 226.688'],
+  [217.7426, 1385.7426, '1049.9007 249.3154'],
+  [249.7426, 1417.7426, '1081.9007 236.0606'],
+  [377.7426, 1353.7426, '1074.1362 126.8058'],
+  [393.7426, 1369.7426, '1090.1362 120.1784'],
+  [409.7426, 1385.7426, '1106.1362 113.5509'],
+  [377.7426, 1385.7426, '1096.7636 136.1784'],
+  [393.7426, 1401.7426, '1112.7636 129.5509'],
+  [345.7426, 1385.7426, '1087.3911 158.8058'],
+  [377.7426, 1417.7426, '1119.3911 145.5509'],
+  [249.7426, 1481.7426, '1127.1556 254.8058'],
+  [281.7426, 1513.7426, '1159.1556 241.5509'],
+  [249.7426, 1513.7426, '1149.783 264.1784'],
+  [217.7426, 1513.7426, '1140.4104 286.8058'],
+  [249.7426, 1545.7426, '1172.4104 273.5509'],
+  [345.7426, 1449.7426, '1132.6459 177.5509'],
+  [329.7426, 1433.7426, '1116.6459 184.1784'],
+  [297.7426, 1433.7426, '1107.2733 206.8058'],
+  [329.7426, 1465.7426, '1139.2733 193.5509'],
+  [281.7426, 1449.7426, '1113.9007 222.8058'],
+  [297.7426, 1465.7426, '1129.9007 216.1784'],
+  [249.7426, 1257.7426, '968.7636 189.1977'],
+  [265.7426, 1273.7426, '984.7636 182.5703'],
+  [233.7426, 1273.7426, '975.3911 205.1977'],
+  [137.7426, 1369.7426, '1015.1556 301.1977'],
+  [121.7426, 1385.7426, '1021.783 317.1977'],
+  [313.7426, 1321.7426, '1032.7636 162.688'],
+  [361.7426, 1369.7426, '1080.7636 142.8058'],
+  [153.7426, 1385.7426, '1031.1556 294.5703'],
+  [185.7426, 1321.7426, '995.2733 253.1977'],
+  [169.7426, 1337.7426, '1001.9007 269.1977'],
+  [297.7426, 1305.7426, '1016.7636 169.3154'],
+  [329.7426, 1337.7426, '1048.7636 156.0606'],
+  [185.7426, 1417.7426, '1063.1556 281.3154'],
+  [201.7426, 1433.7426, '1079.1556 274.688'],
+]
+
+const DOC_PIPS_EXTRA_DARK: Pt[] = [
+  [89.7426, 1385.7426, '1012.4104 339.8251'],
+  [201.7426, 1305.7426, '988.6459 237.1977'],
+  [217.7426, 1449.7426, '1095.1556 268.0606'],
+]
+
+const MP_TASKS: { d: [number, number, string]; dots: Pt[] }[] = [
+  {
+    d: [83.5147, 483.5147, '378.8427 77.3928'],
+    dots: [
+      [95.2929, 486.2954, '372.4806 74.7575'],
+      [99.7175, 490.7201, '376.9052 72.9247'],
+      [104.1422, 495.1447, '381.3298 71.092'],
+      [95.2929, 495.1447, '378.7379 77.3494'],
+      [90.8683, 490.7201, '374.3133 79.1821'],
+      [86.4436, 495.1447, '376.146 83.6068'],
+    ],
+  },
+  {
+    d: [243.5147, 483.5147, '425.7056 -35.7443'],
+    dots: [
+      [255.2929, 486.2954, '419.3435 -38.3796'],
+      [259.7175, 490.7201, '423.7681 -40.2123'],
+      [264.1422, 495.1447, '428.1927 -42.0451'],
+      [255.2929, 495.1447, '425.6009 -35.7877'],
+      [250.8683, 490.7201, '421.1762 -33.955'],
+      [246.4436, 495.1447, '423.009 -29.5303'],
+    ],
+  },
+  {
+    d: [243.5147, 387.5147, '357.8234 -63.862'],
+    dots: [
+      [255.2929, 390.2954, '351.4612 -66.4973'],
+      [259.7175, 394.7201, '355.8859 -68.3301'],
+      [264.1422, 399.1447, '360.3105 -70.1628'],
+      [255.2929, 399.1447, '357.7186 -63.9054'],
+      [246.4436, 399.1447, '355.1267 -57.6481'],
+    ],
+  },
+  {
+    d: [83.5147, 387.5147, '310.9605 49.275'],
+    dots: [
+      [95.2929, 390.2954, '304.5983 46.6397'],
+      [104.1422, 399.1447, '313.4476 42.9743'],
+      [95.2929, 399.1447, '310.8557 49.2316'],
+      [86.4436, 399.1447, '308.2638 55.489'],
+      [90.8683, 394.7201, '306.4311 51.0644'],
+    ],
+  },
+  {
+    d: [83.5147, 291.5147, '243.0782 21.1573'],
+    dots: [
+      [95.2929, 294.2954, '236.7161 18.522'],
+      [86.4436, 303.1447, '240.3815 27.3713'],
+      [95.2929, 303.1447, '242.9734 21.1139'],
+      [104.1422, 303.1447, '245.5653 14.8565'],
+    ],
+  },
+  {
+    d: [243.5147, 291.5147, '289.9411 -91.9798'],
+    dots: [
+      [255.2929, 294.2954, '283.579 -94.6151'],
+      [246.4436, 303.1447, '287.2445 -85.7658'],
+      [255.2929, 303.1447, '289.8364 -92.0232'],
+      [264.1422, 303.1447, '292.4282 -98.2806'],
+    ],
+  },
+  {
+    d: [83.5147, 195.5147, '175.196 -6.9605'],
+    dots: [
+      [95.2929, 198.2954, '168.8338 -9.5958'],
+      [86.4436, 207.1447, '172.4993 -.7465'],
+    ],
+  },
+  {
+    d: [243.5147, 195.5147, '222.0589 -120.0975'],
+    dots: [
+      [255.2929, 207.1447, '221.9541 -120.1409'],
+      [264.1422, 207.1447, '224.546 -126.3983'],
+    ],
+  },
+]
+
+const OFFLINE_TASKS: { d: [number, number, string]; dots: Pt[] }[] = [
+  { d: [403.5147, 195.5147, '268.9218 -233.2346'], dots: [[415.2929, 215.994, '275.0744 -230.6861']] },
+  {
+    d: [403.5147, 291.5147, '336.804 -205.1169'],
+    dots: [
+      [415.2929, 311.994, '342.9566 -202.5684'],
+      [419.7175, 307.5694, '341.1239 -206.993'],
+    ],
+  },
+  {
+    d: [403.5147, 387.5147, '404.6863 -176.9991'],
+    dots: [
+      [415.2929, 407.994, '410.8389 -174.4506'],
+      [419.7175, 403.5694, '409.0062 -178.8753'],
+      [410.8683, 403.5694, '406.4143 -172.6179'],
+    ],
+  },
+]
+
+const SYNC_CURVE =
+  'M256,304v18.8831c0,7.6269-5.3834,14.1935-12.8621,15.6893l-134.2757,26.8551c-7.4788,1.4958-12.8621,8.0624-12.8621,15.6893v18.8831'
+const SYNC_CURVE_R =
+  'M96,208v18.8831c0,7.6269,5.3834,14.1935,12.8621,15.6893l134.2757,26.8551c7.4788,1.4958,12.8621,8.0624,12.8621,15.6893v18.8831'
+const SYNC_CURVE_R2 =
+  'M96,304v18.8831c0,7.6269,5.3834,14.1935,12.8621,15.6893l134.2757,26.8551c7.4788,1.4958,12.8621,8.0624,12.8621,15.6893v18.8831'
+
+export function AutomergeIllustration(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      width="512"
+      height="1856"
+      viewBox="0 0 512 1856"
+      xmlns="http://www.w3.org/2000/svg"
+      className="am-art"
+      role="img"
+      aria-label="A detailed illustration showing the behaviour of Automerge. First, two users collaborate, swapping changes back and forth, always converging on a consistent result. Another user works offline, their changes queuing up, and then they come back online and sync with the first two. Next, we see an exploded view of an Automerge doc, represented by a grid of diamonds nested within a larger grid of diamonds, all connected by lines that suggest branching and merging. Finally, the document is squished down to a small size, thanks to memory compression."
+      {...props}
+    >
+      {/* ————————————————— Conflict-free sync ————————————————— */}
+      <g id="conflict_free-2">
+        {[732, 740, 924, 932, 1116, 1124].map((y) => (
+          <path key={`cf-l-${y}`} d={`m144 ${y}h64`} className="s2" strokeDasharray="4 10" />
+        ))}
+        {[1116, 1124].map((y) => (
+          <path key={`cf-r-${y}`} d={`m304 ${y}h64`} className="s2" strokeDasharray="4 10" />
+        ))}
+
+        <path
+          d="M96,960v18.8831c0,7.6269,5.3834,14.1935,12.8621,15.6893l294.2757,58.8551c7.4788,1.4958,12.8621,8.0624,12.8621,15.6893v18.8831"
+          className="s2"
+        />
+        <path
+          d="M416,768v18.8831c0,7.6269-5.3834,14.1935-12.8621,15.6893l-134.2757,26.8551c-7.4788,1.4958-12.8621,8.0624-12.8621,15.6893v50.8831"
+          className="s2"
+        />
+        <path
+          d="M416,768v18.8831c0,7.6269-5.3834,14.1935-12.8621,15.6893l-294.2757,58.8551c-7.4788,1.4958-12.8621,8.0624-12.8621,15.6893v18.8831"
+          className="s2"
+        />
+        <line x1="416" y1="672" x2="416" y2="704" className="s2" />
+        <path
+          d="M256,960v50.8831c0,7.6269,5.3834,14.1935,12.8621,15.6893l134.2757,26.8551c7.4788,1.4958,12.8621,8.0624,12.8621,15.6893v18.8831"
+          className="s2"
+        />
+
+        {CHANGESETS.map((cs, i) => (
+          <g key={`cs-${i}`}>
+            <Ch x={cs.big[0]} y={cs.big[1]} t={cs.big[2]} />
+            {cs.pips.map((p, j) => (
+              <Sq key={j} x={p[0]} y={p[1]} t={p[2]} />
+            ))}
+          </g>
+        ))}
+
+        <DocGlyph dy={512} />
+
+        <g>
+          <circle cx="416" cy="608" r="64" className="s2" />
+          <rect x="376" y="568" width="80" height="80" rx="8" ry="8" className="rn" />
+          <line x1="416" y1="568" x2="416" y2="672" className="s2" />
+          <path d="M400,568v35.7185c0,2.6748-1.3368,5.1727-3.5624,6.6564l-38.1076,25.4051" className="s2" />
+          <path d="M432,568v35.7185c0,2.6748,1.3368,5.1727,3.5624,6.6564l38.1076,25.4051" className="s2" />
+        </g>
+
+        <PersonGlyph dy={512} />
+
+        <g>
+          <line x1="96" y1="672" x2="96" y2="704" className="s2" />
+          <line x1="256" y1="672" x2="256" y2="704" className="s2" />
+          <line x1="96" y1="768" x2="96" y2="856" className="s2" />
+          <line x1="256" y1="768" x2="256" y2="824" className="s2" />
+          <line x1="416" y1="808" x2="416" y2="896" className="s2" />
+          <line x1="416" y1="960" x2="416" y2="1048" className="s2" />
+          <line x1="256" y1="1032" x2="256" y2="1088" className="s2" />
+          <line x1="96" y1="1000" x2="96" y2="1088" className="s2" />
+        </g>
+      </g>
+
+      {/* ————————————————— Compact ————————————————— */}
+      <g id="compact">
+        <g transform="translate(0, 32)">
+          <g>
+            <line x1="244.2297" y1="1760.4566" x2="244.2297" y2="1760.4566" className="s3" />
+            <path
+              d="M248.4392,1756.2471l1.9041-1.904c3.124-3.1242,8.1895-3.1242,11.3135,0l3.9512,3.951"
+              className="s3"
+              strokeDasharray="0 5.9532"
+            />
+            <line x1="267.7126" y1="1760.3989" x2="267.7126" y2="1760.3989" className="s3" />
+            <path
+              d="M270.8297,1763.516l14.8271,14.8271c3.1242,3.1242,3.1242,8.1895,0,11.3137l-24,24c-3.1242,3.1242-8.1895,3.1242-11.3137,0l-24-24c-3.1242-3.1242-3.1242-8.1895,0-11.3137l14.8271-14.8271"
+              className="s2"
+            />
+            {(
+              [
+                [261.5147, 1773.5147, '1333.1455 333.5022'],
+                [253.5147, 1781.5147, '1336.4592 341.5022'],
+                [245.5147, 1789.5147, '1339.7729 349.5022'],
+                [253.5147, 1797.5147, '1347.7729 346.1885'],
+                [261.5147, 1789.5147, '1344.4592 338.1885'],
+                [269.5147, 1781.5147, '1341.1455 330.1885'],
+                [245.5147, 1773.5147, '1328.4592 344.8159'],
+                [237.5147, 1781.5147, '1331.7729 352.8159'],
+              ] as Pt[]
+            ).map((p, i) => (
+              <Sq key={i} x={p[0]} y={p[1]} t={p[2]} />
+            ))}
+          </g>
+
+          <g>
+            <line x1="227.5356" y1="1771" x2="227.5356" y2="1771" className="s3" />
+            <path
+              d="M222.9619,1766.4263l-9.5435-9.5435c-3.9028-3.9028-4.5552-9.825-1.9575-14.403"
+              className="s3"
+              strokeDasharray="0 6.4682"
+            />
+            <line x1="213.4185" y1="1739.9122" x2="213.4185" y2="1739.9122" className="s3" />
+            <line x1="298.5815" y1="1739.9122" x2="298.5815" y2="1739.9122" className="s3" />
+            <path
+              d="M301.7371,1745.4756c.9885,3.9548-.0632,8.3149-3.1555,11.4072l-11.8303,11.8304"
+              className="s3"
+              strokeDasharray="0 6.4682"
+            />
+            <line x1="284.4644" y1="1771" x2="284.4644" y2="1771" className="s3" />
+          </g>
+
+          <g>
+            <line x1="240.0605" y1="1757.8377" x2="240.0605" y2="1757.8377" className="s3" />
+            <path
+              d="M235.7581,1753.5353l-55.8999-55.8999c-6.2483-6.2484-6.2483-16.379,0-22.6274l1.625-1.625"
+              className="s3"
+              strokeDasharray="0 6.0845"
+            />
+            <line x1="183.6343" y1="1671.2318" x2="183.6343" y2="1671.2318" className="s3" />
+            <line x1="328.3655" y1="1671.2318" x2="328.3655" y2="1671.2318" className="s3" />
+            <path
+              d="M332.6589,1675.5495c5.7263,6.2791,5.5537,16.0149-.5171,22.0859l-58.1101,58.11"
+              className="s3"
+              strokeDasharray="0 6.089"
+            />
+            <line x1="271.8792" y1="1757.8982" x2="271.8792" y2="1757.8982" className="s3" />
+          </g>
+
+          <g>            <line x1="370.9412" y1="1576.4938" x2="370.9412" y2="1576.4938" className="s3" />
+            <path
+              d="M375.1667,1580.7193l1.8037,1.8039c9.3728,9.3726,9.3728,24.5686,0,33.9412l-103.9998,104c-9.3728,9.3726-24.5686,9.3726-33.9414,0l-103.9998-104c-9.3728-9.3726-9.3728-24.5686,0-33.9412l3.9165-3.9167"
+              className="s3"
+              strokeDasharray="0 5.9757"
+            />
+            <line x1="141.0588" y1="1576.4938" x2="141.0588" y2="1576.4938" className="s3" />
+          </g>
+
+          <path
+            d="M233.3726,1663.1212l-150-150c-12.4968-12.4968-12.4968-32.758,0-45.2548l150-150c12.4968-12.4968,32.7581-12.4968,45.2549,0l150,150c12.4968,12.4967,12.4968,32.758,0,45.2548l-150,150c-12.4968,12.4968-32.7581,12.4968-45.2549,0Z"
+            className="s3"
+            strokeDasharray="0 5.9974"
+          />
+
+          <g>
+            <line x1="264.0894" y1="1764.9588" x2="264.0894" y2="1764.9588" className="s3" />
+            <path d="M258.8462,1766.8961c-2.7649.4972-5.6355.2636-8.3013-.7009" className="s3" strokeDasharray="0 5.6165" />
+            <line x1="247.9954" y1="1765.0081" x2="247.9954" y2="1765.0081" className="s3" />
+          </g>
+        </g>
+      </g>
+
+      {/* ————————————————— Versioned ————————————————— */}
+      <g id="versioned-2">
+        <g transform="translate(0, 30)">
+          <path
+            d="M32,1362.528v-24.3347c0-16.7865,6.5952-32.9009,18.3643-44.8707l163.4023-166.3651"
+            className="s3"
+            strokeDasharray="0 5.9657"
+          />
+          <line x1="215.8567" y1="1124.8295" x2="215.8567" y2="1124.8295" className="s3" />
+          <path
+            d="M480,1362.528v-24.3347c0-16.7865-6.5952-32.9009-18.3643-44.8707l-163.4023-166.3651"
+            className="s3"
+            strokeDasharray="0 5.9657"
+          />
+          <line x1="296.1433" y1="1124.8295" x2="296.1433" y2="1124.8295" className="s3" />
+        </g>
+
+        <g transform="translate(0, 32)">
+          <rect
+            x="88.2355"
+            y="1224.7291"
+            width="335.529"
+            height="335.529"
+            rx="32"
+            ry="32"
+            transform={rot('1059.6223 226.8326')}
+            className="ry"
+          />
+
+          {DOC_PIPS_LIGHT.map((p, i) => (
+            <Dm key={`dl-${i}`} x={p[0]} y={p[1]} t={p[2]} c="ry" />
+          ))}
+          {DOC_PIPS_EXTRA_DARK.map((p, i) => (
+            <Dm key={`dx-${i}`} x={p[0]} y={p[1]} t={p[2]} />
+          ))}
+          {DOC_PIPS_DARK.map((p, i) => (
+            <Dm key={`dd-${i}`} x={p[0]} y={p[1]} t={p[2]} />
+          ))}
+
+          <polyline points="256 1232 256 1264 128 1392 128 1424" />
+          <polyline points="256 1232 256 1264 272 1280 272 1536" />
+          <polyline points="368 1408 368 1376 256 1264 256 1232" />
+          <polyline points="304 1312 320 1328 320 1488" />
+          <polyline points="240 1536 240 1280 256 1264 256 1239.3995" />
+          <path
+            d="M176,1343.1521l-5.2627,5.5416c-5.9743,6.2909-5.8465,16.197.2882,22.3317l64.2883,64.2883c3.0006,3.0006,4.6863,7.0702,4.6863,11.3137v17.3726"
+            className="s2"
+          />
+          <path
+            d="M208,1408l11.3137,11.3137c3.0006,3.0006,4.6863,7.0702,4.6863,11.3137v17.9731"
+            className="s2"
+          />
+          <line x1="96" y1="1392" x2="128" y2="1392" className="s2" />
+        </g>
+      </g>
+
+      {/* ————————————————— Offline ————————————————— */}
+      <g id="offline">
+        <line x1="416" y1="512" x2="416" y2="544" className="s2" />
+        <line x1="416" y1="168" x2="416" y2="496" className="s3" strokeDasharray="0 6" />
+        <path
+          d="M428,512h4c4.4183,0,8-3.5817,8-8s-3.5817-8-8-8c-.1199,0-.2366.0127-.3553.0179.2259-.6315.3553-1.3088.3553-2.0179,0-3.3137-2.6863-6-6-6-1.5498,0-2.9577.5927-4.0224,1.5571-.2334-5.3158-4.6043-9.5571-9.9776-9.5571-5.5229,0-10,4.4772-10,10,0,.6886.0698,1.3608.2024,2.0103-.068-.0014-.134-.0103-.2024-.0103-5.5229,0-10,4.4772-10,10s4.4771,10,10,10h26Z"
+          className="fy"
+        />
+
+        <g>
+          <circle cx="416" cy="96" r="64" className="s3" strokeDasharray="0 6.0012" />
+          <line x1="456" y1="117.9012" x2="456" y2="117.9012" className="s3" />
+          <path
+            d="M456,124.006v3.994c0,4.4183-3.5818,8-8,8h-64c-4.4182,0-8-3.5817-8-8v-7.6222"
+            className="s3"
+            strokeDasharray="0 6.1047"
+          />
+          <line x1="376" y1="117.3254" x2="376" y2="117.3254" className="s3" />
+          <line x1="376" y1="107.3938" x2="376" y2="107.3938" className="s3" />
+          <path
+            d="M376,101.3284v-37.3284c0-4.4183,3.5818-8,8-8h64c4.4182,0,8,3.5817,8,8v40.3611"
+            className="s3"
+            strokeDasharray="0 6.0655"
+          />
+          <line x1="456" y1="107.3938" x2="456" y2="107.3938" className="s3" />
+          <line x1="416" y1="61" x2="416" y2="61" className="s3" />
+          <line x1="416" y1="67.1897" x2="416" y2="125.9917" className="s3" strokeDasharray="0 6.1897" />
+          <line x1="416" y1="129.0865" x2="416" y2="129.0865" className="s3" />
+          <line x1="400" y1="61" x2="400" y2="61" className="s3" />
+          <path
+            d="M400,67.0897v24.6288c0,2.6748-1.3369,5.1727-3.5625,6.6564l-31.2402,20.827"
+            className="s3"
+            strokeDasharray="0 6.0898"
+          />
+          <line x1="362.6638" y1="120.8909" x2="362.6638" y2="120.8909" className="s3" />
+          <line x1="432" y1="61" x2="432" y2="61" className="s3" />
+          <path
+            d="M432,67.0898v24.6287c0,2.6748,1.3369,5.1727,3.5625,6.6564l31.2402,20.827"
+            className="s3"
+            strokeDasharray="0 6.0898"
+          />
+          <line x1="469.3364" y1="120.8909" x2="469.3364" y2="120.8909" className="s3" />
+        </g>
+
+        <line x1="416" y1="141.7822" x2="416" y2="154.7344" className="s3" strokeDasharray="0 6" />
+
+        {OFFLINE_TASKS.map((t, i) => (
+          <g key={`ot-${i}`}>
+            <Tk x={t.d[0]} y={t.d[1]} t={t.d[2]} />
+            {t.dots.map((p, j) => (
+              <Dt key={j} x={p[0]} y={p[1]} t={p[2]} />
+            ))}
+          </g>
+        ))}
+      </g>
+
+      {/* ————————————————— Multiplayer ————————————————— */}
+      <g id="multiplayer-2">
+        <DocGlyph />
+        <line x1="256" y1="160" x2="256" y2="208" className="s2" />
+        <line x1="96" y1="160" x2="96" y2="208" className="s2" />
+
+        <Dm x={89.7426} y={393.7426} t="310.9605 49.275" c="ry" />
+        <Dm x={249.7426} y={393.7426} t="357.8234 -63.862" c="ry" />
+
+        <PersonGlyph />
+
+        <Dm x={249.5463} y={201.939} t="222.1402 -119.9012" />
+        <Dm x={89.7426} y={201.939} t="311.0993 287.5312" deg={135} />
+        <Dm x={249.7426} y={297.5463} t="651.841 337.6059" c="ry" deg={135} />
+        <Dm x={89.7426} y={297.7426} t="243.0782 21.1573" c="ry" />
+        <Dm x={249.5463} y={393.939} t="357.9047 -63.6657" />
+        <Dm x={89.7426} y={393.939} t="446.8638 615.2957" deg={135} />
+        <Dm x={249.7426} y={489.5463} t="787.6055 665.3704" c="ry" deg={135} />
+        <Dm x={89.7426} y={489.7426} t="378.8427 77.3928" c="ry" />
+
+        <g>
+          <path d={SYNC_CURVE} className="sy6" />
+          <path d={SYNC_CURVE} className="s2" />
+        </g>
+
+        <line x1="256" y1="512" x2="256" y2="544" className="s2" />
+        <line x1="96.5192" y1="512" x2="96.5192" y2="544" className="s2" />
+
+        <path
+          d="M256,208v18.8831c0,7.6269-5.3834,14.1935-12.8621,15.6893l-134.2757,26.8551c-7.4788,1.4958-12.8621,8.0624-12.8621,15.6893v18.8831"
+          className="s2"
+        />
+        <path
+          d="M256,400v18.8831c0,7.6269-5.3834,14.1935-12.8621,15.6893l-134.2757,26.8551c-7.4788,1.4958-12.8621,8.0624-12.8621,15.6893v18.8831"
+          className="s2"
+        />
+
+        <g>
+          <path d={SYNC_CURVE_R} className="sy6" />
+          <path d={SYNC_CURVE_R} className="s2" />
+        </g>
+        <g>
+          <path d={SYNC_CURVE_R2} className="sy6" />
+          <path d={SYNC_CURVE_R2} className="s2" />
+        </g>
+        <g>
+          <path transform="translate(0, 96)" d={SYNC_CURVE_R2} className="sy6" />
+          <path
+            d="M96,400v18.8831c0,7.6269,5.3834,14.1935,12.8621,15.6893l134.2757,26.8551c7.4788,1.4958,12.8621,8.0624,12.8621,15.6893v18.8831"
+            className="s2"
+          />
+        </g>
+
+        {MP_TASKS.map((t, i) => (
+          <g key={`mt-${i}`}>
+            <Tk x={t.d[0]} y={t.d[1]} t={t.d[2]} />
+            {t.dots.map((p, j) => (
+              <Dt key={j} x={p[0]} y={p[1]} t={p[2]} />
+            ))}
+          </g>
+        ))}
+
+        {[300, 308, 492, 500].map((y) => (
+          <path key={`mp-d-${y}`} d={`m144 ${y}h64`} className="s2" strokeDasharray="4 10" />
+        ))}
+      </g>
+    </svg>
+  )
+}
+
+```
+```components/TaskList.tsx
+import React from 'react'
+import { PlusIcon } from 'lucide-react'
+
+type TaskListProps = {
+  /** Width of the free-text portion of each row. */
+  inputWidth: number
+  /** Width of the absolutely positioned task row. */
+  rowWidth: number
+}
+
+const ROW_OFFSETS = [0, 42, 84, 126]
+
+const fieldClass =
+  'block bg-transparent font-mono text-base font-medium leading-4 tracking-normal text-ellipsis whitespace-nowrap overflow-clip border-0 border-b-2 border-transparent pl-[10px] pt-[13px] pb-[7px] outline-none'
+
+/** The shared "Pre-Flight Sync" task list used by both demo clients. */
+export function TaskList({ inputWidth, rowWidth }: TaskListProps) {
+  return (
+    <>
+      <h3 className="m-[20px_20px_4px] font-mono text-2xl font-thin">Pre-Flight Sync</h3>
+
+      <label className="flex cursor-pointer items-center gap-0.5 pl-5">
+        <PlusIcon
+          aria-hidden="true"
+          className="shrink-0 text-ink"
+          width={18}
+          height={18}
+          strokeWidth={2}
+        />
+        <div className="flex-1">
+          <input
+            type="text"
+            placeholder="New Task"
+            spellCheck={false}
+            aria-label="New task"
+            className={fieldClass}
+            style={{ width: inputWidth }}
+          />
+        </div>
+      </label>
+
+      <div className="relative h-[260px] overflow-hidden">
+        {ROW_OFFSETS.map((offset) => (
+          <div
+            key={offset}
+            className="absolute left-0 top-0 flex items-center gap-0.5 pl-5 [transition:translate_500ms_cubic-bezier(0.6,1,0,1)]"
+            style={{ width: rowWidth, translate: `0px ${offset}px` }}
+          >
+            <input
+              type="checkbox"
+              spellCheck={false}
+              aria-label="Mark task complete"
+              className="relative h-[18px] w-[18px] cursor-pointer appearance-none rounded-[2px] border-2 border-ink"
+            />
+            <input
+              type="text"
+              maxLength={64}
+              spellCheck={false}
+              aria-label="Task"
+              className={fieldClass}
+              style={{ width: inputWidth }}
+            />
+          </div>
+        ))}
+      </div>
+    </>
+  )
+}
+
+```
+```data/features.ts
+export type Feature = {
+  title: string
+  body: string
+  /** Absolute offset from the top of the illustration section. */
+  top: number
+  side: 'left' | 'right'
+}
+
+export const illustrationFeatures: Feature[] = [
+  {
+    title: 'Multiplayer',
+    body: 'Multiple users, multiple cursors, and multiple devices — one document. A single source of truth for your data, mirrored on every client.',
+    top: 96,
+    side: 'left',
+  },
+  {
+    title: 'Offline',
+    body: 'Full functionality when offline. Your changes queue locally, and everything syncs when you reconnect.',
+    top: 384,
+    side: 'right',
+  },
+  {
+    title: 'Consistent',
+    body: 'When users make overlapping edits, Automerge performs a consistent merge that prevents data loss, and gives you tools to control the outcome.',
+    top: 704,
+    side: 'left',
+  },
+  {
+    title: 'Versioned',
+    body: "Automerge remembers every change. Branch fearlessly, experiment boldly. Your document's entire history lives locally, ready when you need it.",
+    top: 1216,
+    side: 'right',
+  },
+  {
+    title: 'Compact',
+    body: 'Automerge supports millions of changes in a single doc. It uses a compressed columnar store on disk and in memory.',
+    top: 1504,
+    side: 'left',
+  },
+  {
+    title: 'Fast',
+    body: 'Our high-performance sync engine lets you edit local documents and see results instantaneously without waiting for distant servers to respond.',
+    top: 1728,
+    side: 'right',
+  },
+]
+
+```
+```components/Demo.tsx
+import React from 'react'
+import { PeerAlex, PeerBrooke, PeerOrion } from './GlyphIcons'
+import { TaskList } from './TaskList'
+
+const glyph = 'h-[34px] w-[34px] shrink-0'
+
+/** The paired desktop + phone clients that demonstrate live sync. */
+export function Demo() {
+  return (
+    <div
+      aria-label="One example of a good use of Automerge would be a collaborative task-list app, like you might use to coordinate a space flight. Multiple users could add their tasks to the list, and everyone would see those tasks instantly stream in — unless they're stuck in a temporal vortex! Thankfully, with rich offline support, all their notes about the desolation of space disasters would sync seamlessly as soon as they escaped."
+      className="relative mb-16 border-b-2 border-ink"
+    >
+      <div aria-hidden="true" className="relative flex w-[1004.14px] items-end gap-x-[150px] gap-y-14">
+        {/* ——— Desktop client ——— */}
+        <div className="shrink-0 rounded-t-lg border-2 border-b-0 border-ink bg-amber [contain:paint]">
+          <div className="am-dots flex h-[33px] w-[530.141px] border-b-2 border-ink p-2">
+            <span className="am-lights block h-[15px] w-[45px]" />
+          </div>
+
+          <div className="flex">
+            <aside className="shrink-0 border-r-2 border-ink px-6 py-[17px] font-mono text-base font-medium leading-4">
+              <div>
+                <h4 className="m-[15px_0_18px] text-xs font-semibold uppercase leading-3">Online</h4>
+                <div className="mb-3 flex items-center gap-[7px]">
+                  <PeerAlex className={`${glyph} -mt-1`} aria-hidden="true" />
+                  <span>Alex</span>
+                </div>
+                <div className="mb-3 flex items-center gap-[7px]">
+                  <PeerBrooke className={`${glyph} -mt-1`} aria-hidden="true" />
+                  <span>Brooke</span>
+                </div>
+              </div>
+
+              <div>
+                <h4 className="m-[22px_0_20px] text-xs font-semibold uppercase leading-3">Offline</h4>
+                <div className="mb-3 flex items-center gap-[7px]">
+                  <PeerOrion className={`${glyph} -mt-1`} aria-hidden="true" />
+                  <span>Orion</span>
+                </div>
+              </div>
+            </aside>
+
+            <div className="relative">
+              <TaskList inputWidth={340} rowWidth={380} />
+            </div>
+          </div>
+        </div>
+
+        {/* ——— Phone client ——— */}
+        <div className="am-dots shrink-0 rounded-t-[56px] border-2 border-b-0 border-ink p-[6px_6px_0]">
+          <div className="relative rounded-t-[48px] border-2 border-b-0 border-ink bg-amber text-ink">
+            <div className="am-dots m-[6px_106px_10px] h-5 w-[88px] rounded-3xl border-2 border-ink" />
+
+            <div className="flex items-center justify-end gap-1 px-[10px]">
+              <PeerAlex className={glyph} aria-hidden="true" />
+              <PeerBrooke className={glyph} aria-hidden="true" />
+              <PeerOrion className={glyph} aria-hidden="true" />
+            </div>
+
+            <TaskList inputWidth={260} rowWidth={300} />
+          </div>
+        </div>
+
+        <canvas width={996} height={436} className="pointer-events-none absolute inset-0 z-10 h-[436px] w-[996.141px]" />
+      </div>
+    </div>
+  )
+}
+
+```and  an
+
+
+Absolutely. And I think we now have enough material to define this as a **full product**, not just a collection of agent/voice/workflow features.
+
+What we've assembled points toward an **AI-native orchestration platform** where users can visually build workflows, deploy autonomous agents, connect tools/MCP, interact through voice/text/vision, and let the system execute and monitor work.
+
+I would build the brand around the idea:
+
+> **You define the outcome. The system figures out the work.**
+
+# Product Brand Direction
+
+## Working Product Name
+
+### **VOXFLOW**
+
+But I would treat that as a working name rather than locking it permanently.
+
+The name currently communicates **voice + flow**, which fits the origins of the project, but the product has evolved beyond voice.
+
+The actual product is becoming:
+
+**Agent + Workflow + Automation + Intelligence + Execution.**
+
+So the brand architecture could become:
+
+> **VOXFLOW**
+> *The autonomous workflow platform.*
+
+or, if we eventually want a broader name:
+
+> **[MASTER BRAND]**
+> *The operating system for autonomous work.*
+
+---
+
+# 01 — PRODUCT CATEGORY
+
+I would **not** position it as simply:
+
+* AI chatbot
+* workflow automation
+* AI agent builder
+* voice agent platform
+* no-code automation
+
+Those descriptions are individually too small.
+
+The category we're building is closer to:
+
+## **Autonomous Work Orchestration**
+
+A platform where:
+
+**Humans define goals → Agents reason → Workflows orchestrate → Tools execute → Events coordinate → The system verifies results.**
+
+---
+
+# 02 — THE CORE PROMISE
+
+### Short version
+
+> **Build AI systems that actually get work done.**
+
+### Product version
+
+> **Design workflows. Deploy autonomous agents. Connect your tools. Let AI execute the work.**
+
+### More ambitious
+
+> **Turn complex goals into autonomous systems.**
+
+---
+
+# 03 — BRAND POSITIONING
+
+### Positioning statement
+
+> **VOXFLOW is an autonomous work orchestration platform that combines visual workflows, AI agents, tools, MCP, multimodal interaction, and real-time execution into one programmable system.**
+
+Instead of making users stitch together:
+
+```text
+Chatbot
++
+Automation platform
++
+Voice platform
++
+AI agent framework
++
+API integrations
++
+Monitoring
++
+Scheduler
++
+Human approvals
+```
+
+VOXFLOW brings them together:
+
+```text
+                 VOXFLOW
+                    │
+       ┌────────────┼────────────┐
+       │            │            │
+    AGENTS      WORKFLOWS      TOOLS
+       │            │            │
+       └────────────┼────────────┘
+                    │
+              EXECUTION ENGINE
+                    │
+        ┌───────────┼───────────┐
+        │           │           │
+      VOICE       VISION       TEXT
+        │           │           │
+        └───────────┼───────────┘
+                    │
+                 RESULTS
+```
+
+---
+
+# 04 — THE BIG IDEA
+
+## **From prompts to systems.**
+
+Most AI products stop at:
+
+> "Ask AI a question."
+
+VOXFLOW moves toward:
+
+> "Give AI a goal."
+
+And then:
+
+```text
+GOAL
+ ↓
+UNDERSTAND
+ ↓
+PLAN
+ ↓
+SELECT TOOLS
+ ↓
+EXECUTE
+ ↓
+OBSERVE
+ ↓
+VERIFY
+ ↓
+ADAPT
+ ↓
+DELIVER
+```
+
+That's the conceptual heart of the product.
+
+---
+
+# 05 — BRAND PHILOSOPHY
+
+### Traditional automation
+
+```text
+IF THIS
+   ↓
+THEN THAT
+```
+
+### AI automation
+
+```text
+IF THIS
+   ↓
+ASK AI
+   ↓
+THEN THAT
+```
+
+### VOXFLOW
+
+```text
+DEFINE THE OUTCOME
+        ↓
+      AGENT
+        ↓
+      PLAN
+        ↓
+    WORKFLOW
+        ↓
+      TOOLS
+        ↓
+    EXECUTION
+        ↓
+    VERIFICATION
+        ↓
+     RESULT
+```
+
+The system isn't merely executing instructions.
+
+It is **orchestrating intelligence toward an outcome.**
+
+---
+
+# 06 — PRODUCT PILLARS
+
+## 1. **Agent Studio**
+
+Create autonomous agents.
+
+Configure:
+
+* role
+* objective
+* instructions
+* memory
+* tools
+* MCP
+* permissions
+* voice
+* vision
+* handoffs
+* behavior
+
+---
+
+## 2. **Workflow Studio**
+
+Visual drag-and-drop orchestration.
+
+```text
+INPUT
+ ↓
+AI
+ ↓
+DECISION
+ ↙   ↘
+TOOL  AGENT
+ ↓     ↓
+TRANSFORM
+ ↓
+OUTPUT
+```
+
+Users can build without code.
+
+Developers can extend everything with Python/TypeScript.
+
+---
+
+## 3. **Tool & MCP Layer**
+
+Connect intelligence to the real world.
+
+```text
+APIs
+DATABASES
+WEB
+EMAIL
+MCP
+CODE
+INTERNAL SYSTEMS
+```
+
+Agents don't just answer.
+
+They **act**.
+
+---
+
+## 4. **Realtime Intelligence**
+
+Voice + text + vision.
+
+```text
+VOICE
+TEXT
+CAMERA
+SCREEN
+```
+
+One agent runtime.
+
+Multiple interfaces.
+
+---
+
+## 5. **Autonomous Execution**
+
+Agents can:
+
+* plan
+* execute
+* observe
+* retry
+* adapt
+* hand off
+* request approval
+* finish
+
+---
+
+## 6. **Control & Governance**
+
+Enterprise-grade control:
+
+* permissions
+* approvals
+* budgets
+* tenant isolation
+* audit logs
+* execution limits
+* tool governance
+* run history
+
+---
+
+# 07 — PRODUCT EXPERIENCE
+
+The first screen shouldn't feel like an IDE.
+
+It should feel like:
+
+## **Mission Control for AI work.**
+
+Dashboard:
+
+```text
+┌──────────────────────────────────────────────┐
+│ VOXFLOW                                     │
+│                                              │
+│ What do you want to accomplish?             │
+│                                              │
+│ ┌──────────────────────────────────────────┐ │
+│ │ Build a workflow...                 🎙️  │ │
+│ └──────────────────────────────────────────┘ │
+│                                              │
+│ Recent Work                                  │
+│                                              │
+│ ○ Customer Research Agent       Running      │
+│ ○ Invoice Processing            Completed    │
+│ ○ Lead Qualification            Scheduled   │
+│                                              │
+│ Agents       Workflows       Runs            │
+│    12            38           1,492          │
+└──────────────────────────────────────────────┘
+```
+
+The user can say:
+
+> "Create a workflow that finds new leads, researches each company, scores them and sends qualified leads to my CRM."
+
+And the system can construct the initial workflow.
+
+---
+
+# 08 — THE SIGNATURE PRODUCT EXPERIENCE
+
+## **Describe → Generate → Inspect → Run → Observe**
+
+Instead of forcing users to manually construct everything:
+
+### Step 1
+
+User describes the goal.
+
+> "Research every company that submits this form."
+
+### Step 2
+
+AI generates:
+
+```text
+Form Input
+ ↓
+Research Agent
+ ↓
+Web Search
+ ↓
+Company Analysis
+ ↓
+Lead Score
+ ↓
+Decision
+ ↙     ↘
+CRM    Reject
+```
+
+### Step 3
+
+User visually inspects it.
+
+### Step 4
+
+User modifies it.
+
+### Step 5
+
+Run.
+
+### Step 6
+
+Watch execution live.
+
+That's potentially one of the strongest differentiators.
+
+---
+
+# 09 — VOICE BECOMES A PRODUCT INTERFACE
+
+Your earlier Pipecat architecture becomes particularly interesting here.
+
+Instead of:
+
+> "Voice chatbot."
+
+We position it as:
+
+## **Talk to your workflows.**
+
+Example:
+
+> "Run the customer research workflow for today's leads."
+
+The system:
+
+```text
+VOICE
+ ↓
+STT
+ ↓
+INTENT CLASSIFICATION
+ ↓
+AUTHORIZATION
+ ↓
+WORKFLOW
+ ↓
+EXECUTION
+ ↓
+VOICE RESPONSE
+```
+
+Or:
+
+> "Add a decision node after the research step."
+
+The canvas changes.
+
+That is far more distinctive than simply having a voice assistant.
+
+---
+
+# 10 — VISUAL LANGUAGE
+
+Based on the design direction we've developed previously, I would make this **technical but human**, rather than the generic neon-purple "AI startup" aesthetic.
+
+### Design personality
+
+**Intelligent.**
+
+**Precise.**
+
+**Editorial.**
+
+**Systematic.**
+
+**Human.**
+
+**Slightly futuristic.**
+
+Not:
+
+❌ excessive gradients
+❌ glowing AI brains
+❌ robot illustrations
+❌ generic purple SaaS
+❌ endless rounded cards
+
+Instead:
+
+```text
+BLACK / OFF-WHITE
++
+SIGNAL COLOR
++
+TECHNICAL GRID
++
+EDITORIAL TYPOGRAPHY
++
+DATA VISUALIZATION
++
+NODE GRAPHICS
+```
+
+The visual language can borrow from your **Algorithmic Humanism** direction:
+
+> technology that feels engineered by humans rather than decorated by AI.
+
+---
+
+# 11 — BRAND VOICE
+
+VOXFLOW should sound:
+
+**Confident.**
+
+**Technical.**
+
+**Clear.**
+
+**Intelligent.**
+
+**Unhyped.**
+
+Avoid:
+
+> "Revolutionize your business with our cutting-edge AI-powered solution."
+
+Instead:
+
+> **Give AI a goal. Give it the tools. Let it execute.**
+
+Or:
+
+> **Stop prompting. Start orchestrating.**
+
+Or:
+
+> **Build systems that can act.**
+
+---
+
+# 12 — TAGLINE SYSTEM
+
+Primary:
+
+## **Build systems that can act.**
+
+Alternative:
+
+### **From goals to execution.**
+
+### **AI that works through the workflow.**
+
+### **Turn goals into autonomous systems.**
+
+### **Design the work. Let AI run it.**
+
+### **Don't just ask AI. Give it a job.**
+
+### **The operating system for autonomous work.**
+
+My strongest combination:
+
+> **VOXFLOW**
+> **Build systems that can act.**
+
+Supporting line:
+
+> **Visual workflows. Autonomous agents. Real-world execution.**
+
+---
+
+# 13 — WEBSITE HERO
+
+## Build systems that can act.
+
+Design workflows visually. Deploy autonomous AI agents. Connect your tools, APIs and MCP servers. Then let the system plan, execute, verify and report the work.
+
+**[Build a Workflow]**
+**[Explore the Platform]**
+
+Small supporting line:
+
+> **Workflows · Agents · Voice · Vision · MCP · Automation**
+
+---
+
+# 14 — HERO VISUAL
+
+I would make the website hero itself demonstrate the product.
+
+```text
+                    GOAL
+                     │
+                     ▼
+              ┌─────────────┐
+              │    AGENT    │
+              └──────┬──────┘
+                     │
+          ┌──────────┼──────────┐
+          ▼          ▼          ▼
+       SEARCH       API        MCP
+          │          │          │
+          └──────────┼──────────┘
+                     ▼
+                 DECISION
+                ↙         ↘             HUMAN       EXECUTE
+                ↘         ↙
+                     ▼
+                   RESULT
+```
+
+Animated subtly.
+
+Not a decorative illustration.
+
+**The product architecture becomes the brand graphic.**
+
+---
+
+# 15 — PRODUCT NAVIGATION
+
+I'd structure the application around:
+
+```text
+VOXFLOW
+
+HOME
+
+BUILD
+ ├── Workflows
+ ├── Agents
+ ├── Tools
+ ├── MCP
+ └── Blueprints
+
+RUN
+ ├── Active Runs
+ ├── Run History
+ ├── Schedules
+ └── Triggers
+
+DATA
+ ├── Knowledge
+ ├── Files
+ └── Connections
+
+CONTROL
+ ├── Approvals
+ ├── Permissions
+ ├── Usage
+ └── Audit
+
+DEVELOP
+ ├── API
+ ├── SDK
+ └── Documentation
+```
+
+---
+
+# 16 — THE WORKFLOW BUILDER
+
+The visual builder becomes the heart of the application.
+
+Top bar:
+
+```text
+← Workflows
+
+Customer Intelligence
+Draft · v4
+
+[Validate] [Test] [Run] [Publish]
+```
+
+Canvas:
+
+```text
+                 ┌─────────────┐
+                 │    INPUT    │
+                 └──────┬──────┘
+                        │
+                        ▼
+                 ┌─────────────┐
+                 │ AI RESEARCH │
+                 └──────┬──────┘
+                        │
+              ┌─────────┴─────────┐
+              ▼                   ▼
+        ┌──────────┐        ┌──────────┐
+        │ WEB SEARCH│        │   MCP    │
+        └─────┬────┘        └────┬─────┘
+              │                  │
+              └────────┬─────────┘
+                       ▼
+                 ┌─────────────┐
+                 │   DECISION  │
+                 └──────┬──────┘
+                        │
+                       ...
+```
+
+Right panel:
+
+**Node Configuration**
+
+Bottom:
+
+**Execution Console**
+
+---
+
+# 17 — AGENT BUILDER
+
+Agent configuration:
+
+```text
+AGENT
+
+Name
+Research Analyst
+
+Objective
+Research and qualify incoming leads.
+
+MODEL
+Claude / GPT / Gemini
+
+TOOLS
+✓ Web Search
+✓ HTTP
+✓ MCP
+
+MEMORY
+✓ Session
+✓ Long-term
+
+BEHAVIOR
+Autonomous
+
+PERMISSIONS
+Research only
+
+HANDOFFS
+→ Sales Agent
+→ Human Review
+
+VOICE
+Enabled
+
+VISION
+Enabled
+```
+
+---
+
+# 18 — AGENT ↔ WORKFLOW
+
+This should become a signature visual concept:
+
+```text
+             AGENT
+               │
+        ┌──────┴──────┐
+        │             │
+     THINK          ACT
+        │             │
+        ▼             ▼
+    WORKFLOW        TOOLS
+        │             │
+        └──────┬──────┘
+               ▼
+            RESULT
+```
+
+---
+
+# 19 — DEVELOPER POSITIONING
+
+We should not alienate developers with the visual builder.
+
+The positioning should be:
+
+### **No-code when you want speed. Code when you need control.**
+
+Developers can use:
+
+```text
+Python
+TypeScript
+REST API
+SDK
+MCP
+Webhooks
+```
+
+Visual workflows become serialized, versioned, testable artifacts.
+
+---
+
+# 20 — ADVANCED PYTHON / SDK STORY
+
+This is where your earlier Python requirement fits:
+
+```python
+workflow = Workflow("lead-research")
+
+workflow.input("lead")
+
+research = workflow.agent(
+    "research_agent"
+)
+
+score = workflow.ai(
+    model="...",
+    instructions="Score this lead."
+)
+
+workflow.connect("lead", research)
+workflow.connect(research, score)
+
+workflow.publish()
+```
+
+The visual canvas represents the same underlying graph.
+
+**Visual and code interfaces should converge on one workflow definition.**
+
+That's an extremely important architectural/product principle.
+
+---
+
+# 21 — ENTERPRISE STORY
+
+The enterprise pitch becomes:
+
+> **Give every team an execution layer for AI.**
+
+Instead of each team independently building:
+
+* AI scripts
+* bots
+* automations
+* internal tools
+* integrations
+* agents
+
+VOXFLOW gives them one governed environment.
+
+### Enterprise capabilities
+
+```text
+Multi-tenancy
+RBAC
+Audit
+Approvals
+Budgets
+Secrets
+Tool governance
+Versioning
+Observability
+API access
+MCP
+Workflow isolation
+Agent governance
+```
+
+---
+
+# 22 — USE CASES
+
+Don't lead the homepage with 40 use cases.
+
+Use four categories.
+
+### Operations
+
+> Automate repetitive operational work.
+
+### Research
+
+> Deploy agents that gather, analyze and synthesize information.
+
+### Customer Experience
+
+> Build intelligent voice, chat and workflow experiences.
+
+### Engineering
+
+> Connect AI agents to APIs, code, infrastructure and internal tools.
+
+Then demonstrate examples:
+
+```text
+Lead Research
+Customer Support
+Invoice Processing
+Market Intelligence
+Sales Qualification
+Document Processing
+Voice Receptionist
+Compliance Review
+Internal Knowledge Agent
+Automated Reporting
+```
+
+---
+
+# 23 — BLUEPRINT MARKETPLACE
+
+Eventually:
+
+## **Blueprints**
+
+Instead of users starting from zero:
+
+> **Start with a working system.**
+
+Categories:
+
+```text
+Sales
+Marketing
+Operations
+Research
+Customer Support
+Finance
+Engineering
+HR
+```
+
+Each blueprint becomes:
+
+```text
+Workflow
++
+Agents
++
+Tools
++
+Prompts
++
+Schemas
++
+Triggers
+```
+
+---
+
+# 24 — PRODUCT FLYWHEEL
+
+This could become the growth engine:
+
+```text
+USER
+ ↓
+BUILD WORKFLOW
+ ↓
+RUN WORKFLOW
+ ↓
+SAVE BLUEPRINT
+ ↓
+SHARE
+ ↓
+OTHER USER CLONES
+ ↓
+MODIFIES
+ ↓
+RUNS
+ ↓
+CREATES NEW BLUEPRINT
+ ↓
+MARKETPLACE
+```
+
+---
+
+# 25 — CONTENT STRATEGY
+
+The content shouldn't just be "AI news."
+
+Build the brand around **teaching people how autonomous systems actually work.**
+
+### Content pillars
+
+**01 — Agent Engineering**
+
+> How to build reliable autonomous agents.
+
+**02 — Workflow Architecture**
+
+> How to turn complex work into executable graphs.
+
+**03 — AI Systems**
+
+> Planning, memory, tools, evaluation, orchestration.
+
+**04 — Realtime AI**
+
+> Voice, vision, multimodal agents.
+
+**05 — AI Infrastructure**
+
+> Events, queues, MCP, APIs, observability.
+
+**06 — Autonomous Business**
+
+> What happens when software can actually execute work.
+
+---
+
+# 26 — SIGNATURE CONTENT SERIES
+
+### **THE AUTONOMOUS STACK**
+
+Break down:
+
+```text
+Perception
+↓
+Reasoning
+↓
+Planning
+↓
+Tools
+↓
+Execution
+↓
+Verification
+```
+
+---
+
+### **AGENT AUTOPSIES**
+
+Take an AI system and dissect:
+
+> What actually happened between the user's request and the result?
+
+---
+
+### **WORKFLOW OF THE WEEK**
+
+Show one real workflow.
+
+```text
+Problem
+ ↓
+Architecture
+ ↓
+Nodes
+ ↓
+Agents
+ ↓
+Tools
+ ↓
+Execution
+ ↓
+Result
+```
+
+---
+
+### **BUILDING AGENTS THAT DON'T LIE**
+
+Focus on:
+
+* structured outputs
+* verification
+* tool permissions
+* evaluation
+* failure handling
+
+This could become a very strong technical thought-leadership angle.
+
+---
+
+# 27 — SOCIAL CONTENT STYLE
+
+Short-form:
+
+> **Your AI isn't autonomous because it can talk.**
+
+Then:
+
+```text
+Talk
+≠
+Reason
+≠
+Act
+≠
+Verify
+```
+
+Follow with:
+
+> An autonomous system needs all four.
+
+Then introduce:
+
+```text
+PERCEIVE
+PLAN
+ACT
+VERIFY
+```
+
+---
+
+Another:
+
+> **The future of AI isn't more prompts.**
+
+> It's better systems.
+
+Then:
+
+```text
+Goal
+↓
+Agent
+↓
+Workflow
+↓
+Tools
+↓
+Execution
+↓
+Verification
+```
+
+---
+
+# 28 — LAUNCH NARRATIVE
+
+Don't launch with:
+
+> "We built an AI workflow platform."
+
+Too generic.
+
+Launch with:
+
+## **AI learned to talk. We're teaching it to work.**
+
+Then:
+
+> Today's AI can write, summarize, search and chat.
+>
+> But real work is different.
+>
+> Real work requires planning.
+>
+> It requires tools.
+>
+> It requires decisions.
+>
+> It requires permissions.
+>
+> It requires execution.
+>
+> And it requires knowing when something went wrong.
+>
+> **VOXFLOW is built for that layer.**
+
+Then reveal:
+
+> **Build systems that can act.**
+
+---
+
+# 29 — BRAND ARCHITECTURE
+
+I would eventually organize the ecosystem like this:
+
+```text
+                         VOXFLOW
+                            │
+        ┌───────────────────┼───────────────────┐
+        │                   │                   │
+    VOXFLOW AGENTS    VOXFLOW WORKFLOWS   VOXFLOW VOICE
+        │                   │                   │
+        │                   │                   │
+     Agents              Automation          Realtime
+        │                   │                   │
+        └───────────────────┼───────────────────┘
+                            │
+                       VOXFLOW CORE
+                            │
+             ┌──────────────┼──────────────┐
+             │              │              │
+            MCP           TOOLS          EVENTS
+             │              │              │
+             └──────────────┼──────────────┘
+                            │
+                         DEVELOPERS
+```
+
+---
+
+# 30 — THE ONE-SENTENCE PRODUCT
+
+If someone asks:
+
+**"What is VOXFLOW?"**
+
+The answer should be:
+
+> **VOXFLOW is an autonomous work platform where you visually design workflows, deploy AI agents, connect real-world tools, and let intelligent systems execute and verify complex tasks.**
+
+And the short answer:
+
+> **VOXFLOW turns goals into execution.**
+
+---
+
+## And yes — we can take this much further.
+
+The material you've given me is enough to build an actual **complete product/brand bible**, not just marketing copy. I would structure the master document as:
+
+```text
+VOXFLOW
+│
+├── 01 BRAND STRATEGY
+│   ├── Vision
+│   ├── Mission
+│   ├── Category
+│   ├── Positioning
+│   ├── Values
+│   └── Competitive Narrative
+│
+├── 02 PRODUCT STRATEGY
+│   ├── Agent Runtime
+│   ├── Workflow Runtime
+│   ├── Tool Runtime
+│   ├── Event Runtime
+│   ├── Voice
+│   ├── Vision
+│   └── Governance
+│
+├── 03 UX ARCHITECTURE
+│   ├── Dashboard
+│   ├── Workflow Builder
+│   ├── Agent Builder
+│   ├── Tool Registry
+│   ├── Run Monitor
+│   └── Command Center
+│
+├── 04 DESIGN SYSTEM
+│   ├── Logo
+│   ├── Typography
+│   ├── Color
+│   ├── Components
+│   ├── Motion
+│   └── Visual Language
+│
+├── 05 WEBSITE
+│   ├── Homepage
+│   ├── Product Pages
+│   ├── Agent Page
+│   ├── Workflow Page
+│   ├── Developer Page
+│   └── Enterprise
+│
+├── 06 CONTENT ENGINE
+│   ├── Blog
+│   ├── Documentation
+│   ├── Social
+│   ├── Tutorials
+│   └── Case Studies
+│
+├── 07 DEVELOPER ECOSYSTEM
+│   ├── SDK
+│   ├── API
+│   ├── MCP
+│   ├── Python
+│   ├── TypeScript
+│   └── CLI
+│
+└── 08 LAUNCH
+    ├── Beta
+    ├── Waitlist
+    ├── Product Hunt
+    ├── Technical Launch
+    └── Growth Flywheel
+```
+
+**That is the level I'd take this to.** The strongest differentiator isn't "we have voice, vision, MCP, workflows, and agents." It's the **unification of those capabilities into one execution model**: *agents reason, workflows orchestrate, tools act, events connect, and verification closes the loop.*
