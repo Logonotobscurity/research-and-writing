@@ -29,6 +29,21 @@ The purpose is to make the history navigable and useful: understand what was dis
 12. [11 — Creative, knowledge, media, and communication work](./11-creative-knowledge-media-and-communication-work.md)
 13. [12 — Latest conversation phase and continuity note](./12-latest-conversation-phase-and-continuity.md)
 14. [13 — Open threads, evidence register, and maintenance protocol](./13-open-threads-and-maintenance-protocol.md)
+15. [14 — Cross-workstream synthesis and unresolved tensions](./14-cross-workstream-synthesis-and-unresolved-tensions.md)
+16. [15 — Forward research agenda and priorities](./15-forward-research-agenda-and-priorities.md)
+
+## Product dossier index
+
+The thematic documents above provide the account-wide context. The following directory adds focused records for selected products and projects, separating each product's intended user problem, differentiation, architecture, historical status, evidence gaps, and open questions:
+
+- [Product dossier index](./products/README.md)
+- [ContextPocket](./products/context-pocket.md)
+- [Re:Mind Me](./products/remind-me.md)
+- [MorrowVoice](./products/morrowvoice.md)
+- [Grounded Guide](./products/grounded-guide.md)
+- [CLIPIN / Clip Creator Studio](./products/clipin-clip-creator-studio.md)
+- [GigPilot, AgentBridge Africa, SafeChain, and related products](./products/gigpilot-agentbridge-safechain-and-related-products.md)
+- [ATS and career intelligence](./products/ats-and-career-intelligence.md)
 
 ## Main organising idea
 
@@ -53,6 +68,8 @@ A repository name does not prove current activity or deployment. A proposed arch
 ## Relationship to the existing conversation folder
 
 The separate `conversations/research-led-systems-builder/` folder preserves the focused phase-by-phase conversation about the integration of investigation and systems building. This archive links to that work and broadens it across the account; it does not replace it.
+
+The separate `conversations/identity-escalation-attention-hooks/` folder preserves the focused 6–8 November 2026 conversation on cognitive dissonance, identity escalation, attention-getting copy, flyer production, and automation-prompt iteration. It remains a distinct conversation archive rather than being absorbed into the wider Identity-Tension Writing summary here.
 
 ## Reading and maintenance
 
