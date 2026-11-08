@@ -31,6 +31,9 @@ The purpose is to make the history navigable and useful: understand what was dis
 14. [13 — Open threads, evidence register, and maintenance protocol](./13-open-threads-and-maintenance-protocol.md)
 15. [14 — Cross-workstream synthesis and unresolved tensions](./14-cross-workstream-synthesis-and-unresolved-tensions.md)
 16. [15 — Forward research agenda and priorities](./15-forward-research-agenda-and-priorities.md)
+17. [16 — Archival build conversation: verbatim transcript](./16-archival-build-conversation-verbatim-transcript-2026-11-08.md)
+18. [17 — Archival build repository actions and source provenance](./17-archival-build-repository-actions-and-source-provenance-2026-11-08.md)
+19. [18 — Recoverability, prompt, automation, and asset gap ledger](./18-recoverability-prompt-automation-and-asset-gap-ledger-2026-11-08.md)
 
 ## Product dossier index
 
@@ -44,6 +47,12 @@ The thematic documents above provide the account-wide context. The following dir
 - [CLIPIN / Clip Creator Studio](./products/clipin-clip-creator-studio.md)
 - [GigPilot, AgentBridge Africa, SafeChain, and related products](./products/gigpilot-agentbridge-safechain-and-related-products.md)
 - [ATS and career intelligence](./products/ats-and-career-intelligence.md)
+
+## Verbatim session record and recovery audit — 8 November 2026
+
+The follow-up archival request is preserved as a dated append-only supplement. Phase 16 records both user messages and all 13 user-visible assistant responses from the account-wide archive-building exchange in sequence. Phase 17 records the repository actions, merge, files, and exact GitHub URLs used. Phase 18 audits which prompts, automation results, generated assets, research sources, and historical messages are recoverable, unavailable, or were not produced in this particular exchange.
+
+This supplement is distinct from the identity-escalation conversation archive. That separate folder retains its own Phases 07–09 and source-registry addendum for the earlier cognitive-dissonance/attention-copy research and automation work.
 
 ## Main organising idea
 
