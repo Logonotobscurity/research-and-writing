@@ -178,3 +178,18 @@ Those gaps are separately recorded in 08-gaps-unavailable-vs-not-produced.md and
 ## 10. Text extraction fidelity clarification
 
 Final verification compared Library byte-size metadata with the GitHub copies. The two long August pasted-text files were retrieved across all pages (2,447 lines and 2,684 lines respectively). Their byte-size differences are consistent with line-ending normalization by the Library text reader (CRLF to LF plus terminal newline). The text sequence is preserved, but the copies are not claimed to be byte-identical raw exports. The Library originals remain unchanged.
+
+
+## 11. Assistant completion response — VERBATIM-ASSISTANT
+
+> The source-first archive has been added to the repository and verified on the main branch.
+>
+> [Open the source archive](https://github.com/Logonotobscurity/research-and-writing/tree/main/conversations/account-wide-source-archive)
+>
+> It contains 13 archive index/document files, 14 recovered original text/JSON artefacts, a 742-file Library inventory, an index of 404 files marked model-generated, and a URL provenance register with 99 records. It also preserves the two latest archive requests and the recoverable assistant messages from those work sessions.
+>
+> The archive includes a chronological conversation register, prompt/version history, automation and execution results, source provenance, asset references, and a gap register separating unavailable material from actions explicitly not produced in recorded runs. The existing research-led-systems-builder, identity-escalation-attention-hooks, and account-wide thematic folders remain separate and are linked rather than overwritten.
+>
+> This is not a complete raw export of every account conversation. Exact wording is preserved where it was accessible; older messages known only through summaries remain labelled as reported or reconstructed. Library-only binary assets are indexed by their private file references when no public URL was available. Two source reports containing a previously restricted benchmark reference are indexed but not copied into the public repository. The two long August text artefacts were recovered across all pages; their line endings may be normalized by the text reader, while the original Library files remain unchanged.
+>
+> [Read the verbatim recoverable exchanges](https://github.com/Logonotobscurity/research-and-writing/blob/main/conversations/account-wide-source-archive/02-verbatim-recoverable-exchanges-2026-11-08.md) · [View the automation results](https://github.com/Logonotobscurity/research-and-writing/blob/main/conversations/account-wide-source-archive/04-automation-and-tool-execution-results.md) · [View the source URL register](https://github.com/Logonotobscurity/research-and-writing/blob/main/conversations/account-wide-source-archive/05-external-url-and-source-provenance-register.csv) · [View the asset index](https://github.com/Logonotobscurity/research-and-writing/blob/main/conversations/account-wide-source-archive/06-generated-assets-index.csv) · [Read the gap register](https://github.com/Logonotobscurity/research-and-writing/blob/main/conversations/account-wide-source-archive/08-gaps-unavailable-vs-not-produced.md)
