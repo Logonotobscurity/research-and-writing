@@ -10,7 +10,7 @@ The following source files were read from exact Library file references and copi
 | LOG_ON_66_Track_Research_and_Evidence_Dossier.md | file_000000000d5081fab4731ce3709e360c | 7 Nov 2026 |
 | LOG_ON_Complete_Product_and_Operational_Flowcharts.md | file_00000000855881faa28819b2a2428f7f | 7 Nov 2026 |
 | Pasted-text-20260809-065238.txt | file_00000000b84881f48123c9cc3dc97dba | 9 Aug 2026 |
-| Pasted-text-20260816-220625.txt | file_00000000226481f482f299cd474617a | 16 Aug 2026 |
+| Pasted-text-20260816-220625.txt | file_00000000226481f48e6bc73f78763164 | 16 Aug 2026 |
 | CLIPIN_video_YouTube_clipping_design_extraction_v1.md | file_0000000086f881f4867e6be111b9d435 | 14 Oct 2026 |
 | PAL_SF_001_Initial_Audit.md | file_00000000c66081f4b6f7795dd9c434df | 22 Oct 2026 |
 | PAL_SF_001_RUNBOOK.md | file_00000000372c82439f009fcdc9e58c30 | 22 Oct 2026 |
