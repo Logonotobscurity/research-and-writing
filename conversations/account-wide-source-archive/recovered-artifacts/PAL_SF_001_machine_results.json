@@ -1,0 +1,186 @@
+{
+  "tool": "PAL-SF-001",
+  "mode": "read-only structural checks",
+  "warning": "No linguistic, provenance, or cultural correctness is established.",
+  "files": [
+    {
+      "file": "/mnt/data/pal_audit_inputs/PAL_v0.2_fixed.md",
+      "bytes": 23592,
+      "lines": 618,
+      "sha256": "9bab0f9ef33424fb07e83a2e227b54ead2b34f6dd20c46e36e4e1d81616a1bd7",
+      "unicode_decode": "PASS",
+      "entry_count": 10,
+      "entries": [
+        {
+          "entry_id": "01",
+          "title": "RELATIONAL OBLIGATION",
+          "yoruba_field_present": true,
+          "source_unverified_marker": true,
+          "hypothesis_marker_count": 6,
+          "tbd_count": 1
+        },
+        {
+          "entry_id": "02",
+          "title": "EFFORT AND ENTITLEMENT",
+          "yoruba_field_present": true,
+          "source_unverified_marker": true,
+          "hypothesis_marker_count": 5,
+          "tbd_count": 1
+        },
+        {
+          "entry_id": "03",
+          "title": "FORMATION AND SUCCESSION",
+          "yoruba_field_present": true,
+          "source_unverified_marker": true,
+          "hypothesis_marker_count": 5,
+          "tbd_count": 1
+        },
+        {
+          "entry_id": "04",
+          "title": "IRREVERSIBLE TRANSFORMATION",
+          "yoruba_field_present": true,
+          "source_unverified_marker": true,
+          "hypothesis_marker_count": 6,
+          "tbd_count": 1
+        },
+        {
+          "entry_id": "05",
+          "title": "SURFACE AND SUBSTANCE",
+          "yoruba_field_present": true,
+          "source_unverified_marker": true,
+          "hypothesis_marker_count": 5,
+          "tbd_count": 1
+        },
+        {
+          "entry_id": "06",
+          "title": "HIERARCHICAL PROTOCOL",
+          "yoruba_field_present": true,
+          "source_unverified_marker": true,
+          "hypothesis_marker_count": 4,
+          "tbd_count": 1
+        },
+        {
+          "entry_id": "07",
+          "title": "GENERATIONAL RESPONSIBILITY",
+          "yoruba_field_present": true,
+          "source_unverified_marker": true,
+          "hypothesis_marker_count": 4,
+          "tbd_count": 1
+        },
+        {
+          "entry_id": "08",
+          "title": "COLLECTIVE ALIGNMENT",
+          "yoruba_field_present": true,
+          "source_unverified_marker": true,
+          "hypothesis_marker_count": 5,
+          "tbd_count": 1
+        },
+        {
+          "entry_id": "09",
+          "title": "TEMPORAL POSITIONING",
+          "yoruba_field_present": true,
+          "source_unverified_marker": true,
+          "hypothesis_marker_count": 2,
+          "tbd_count": 1
+        },
+        {
+          "entry_id": "10",
+          "title": "CAUSAL ACCOUNTABILITY",
+          "yoruba_field_present": true,
+          "source_unverified_marker": true,
+          "hypothesis_marker_count": 9,
+          "tbd_count": 1
+        }
+      ],
+      "entry_level_unverified_count": 10,
+      "unicode": {
+        "contains_combining_marks": true,
+        "contains_yoruba_underdot_letters": true,
+        "normalization_form_nfc": true,
+        "warning": "Unicode checks cannot authenticate spelling, tone, or cultural correctness."
+      },
+      "findings": [
+        {
+          "id": "PAL-SF-COUNT-001",
+          "severity": "HIGH",
+          "observation": "Inspected v0.2 draft contains 10 entry sections, not 52.",
+          "note": "This finding applies only to this file, not to every possible PAL artifact."
+        },
+        {
+          "id": "PAL-SF-PROV-001",
+          "severity": "CRITICAL",
+          "observation": "10/10 entry sections carry SOURCE_NOT_YET_VERIFIED."
+        }
+      ]
+    },
+    {
+      "file": "/mnt/data/pal_audit_inputs/PAL_V03_ARCHITECTURE.md",
+      "bytes": 21771,
+      "lines": 1063,
+      "sha256": "8cc555d151e283c15bc6169a88960a32a675326e190792f9a0beb0588bf0a1b6",
+      "unicode_decode": "PASS",
+      "dimension_headings": [
+        {
+          "number": 1,
+          "name": "Simulation World"
+        },
+        {
+          "number": 2,
+          "name": "Conceptual Domain"
+        },
+        {
+          "number": 3,
+          "name": "Discourse Position"
+        },
+        {
+          "number": 4,
+          "name": "Speech Act"
+        },
+        {
+          "number": 5,
+          "name": "Relationship Register"
+        },
+        {
+          "number": 6,
+          "name": "Community Specificity"
+        },
+        {
+          "number": 7,
+          "name": "Failure Contexts"
+        },
+        {
+          "number": 8,
+          "name": "Historical Provenance"
+        },
+        {
+          "number": 9,
+          "name": "Philosophical Layer"
+        },
+        {
+          "number": 10,
+          "name": "Worldview Assumptions"
+        },
+        {
+          "number": 11,
+          "name": "Temporal Logic"
+        },
+        {
+          "number": 12,
+          "name": "Power Symmetry"
+        },
+        {
+          "number": 13,
+          "name": "Deployment Risk"
+        }
+      ],
+      "dimension_count": 13,
+      "unicode": {
+        "contains_combining_marks": false,
+        "contains_yoruba_underdot_letters": false,
+        "normalization_form_nfc": true,
+        "warning": "Unicode checks cannot authenticate spelling, tone, or cultural correctness."
+      },
+      "findings": []
+    }
+  ]
+}
