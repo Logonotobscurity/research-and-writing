@@ -16,10 +16,18 @@ A durable notebook for research, writing, conceptual development, and the evolut
 
 ### Research-led systems building and intellectual orientation
 
-`conversations/research-led-systems-builder/`
+[conversations/research-led-systems-builder/](./conversations/research-led-systems-builder/README.md)
 
 This conversation examines the relationship between research, curiosity, complex problem-solving, systems architecture, building, and technology integration. Its central conclusion is that investigation and building are complementary parts of one iterative operating pattern.
 
+### Account-wide conversation synthesis
+
+[conversations/account-wide-conversation-synthesis/](./conversations/account-wide-conversation-synthesis/README.md)
+
+A broader, phased and thematic synthesis of the major workstreams visible across the available account context through 8 November 2026. It includes the user's research and working orientation, research methodology, Identity-Tension Writing, LOG_ON business strategy and architecture, Agent Assurance, PAL and voice research, global business intelligence, product engineering, individual product dossiers, visual direction, integrations, commercial validation, and the latest phase of discussion.
+
+The account-wide folder is a structured reconstruction from available conversation context, saved memory, recent-conversation summaries, and inspected repository material. It is **not a complete raw export of every account conversation**. Its scope, provenance rules, and known limitations are documented in the folder's opening guide.
+
 ## Archive status
 
-The initial folder documents the conversation's phases and conclusions using the conversation context available at the time of writing. It is a structured research record, **not a complete raw export of every message**. Any synthesized passages are labelled as such. Future additions should preserve exact message text when available and append new dated phases rather than rewriting the historical record.
+The conversation folders document phases and conclusions using the source context available at the time of writing. They are structured research records, **not complete raw exports of every message**. Synthesized passages are labelled as such. Future additions should preserve exact message text when available and append new dated phases rather than rewriting the historical record.
