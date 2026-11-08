@@ -20,6 +20,8 @@ It is based on the accessible conversation thread. Exact user instructions and k
 5. [04 — Automation prompt iteration](./04-automation-prompt-iteration.md)
 6. [05 — First automation output and further refinement](./05-first-automation-output-and-refinement.md)
 7. [SOURCE_REGISTRY.md](./SOURCE_REGISTRY.md)
+8. [07 — Archive completeness correction and verbatim preservation](./07-archive-completeness-correction-2026-11-08.md)
+9. [Source registry addendum — 8 November 2026](./SOURCE_REGISTRY-ADDENDUM-2026-11-08.md)
 
 ## Evidence conventions
 
@@ -36,3 +38,7 @@ This work connects to the broader writing and communication themes in `conversat
 ## Maintenance
 
 Append new dated phases when the automation produces further outputs or the prompt is revised. Do not overwrite earlier versions of the prompt or earlier line sets.
+
+## Dated archival correction — 8 November 2026
+
+The initial archive is a phase summary, not a complete transcript or a complete preservation of every generated deliverable. The [completeness correction](./07-archive-completeness-correction-2026-11-08.md) records exactly what is and is not recoverable, establishes verbatim-preservation rules, and documents the current gaps. The [source registry addendum](./SOURCE_REGISTRY-ADDENDUM-2026-11-08.md) separates URLs already recorded from bibliographic locators checked during the later audit. Earlier phase files have been left unchanged.
