@@ -173,3 +173,8 @@ The archive does not include:
 - Hidden private internal reasoning traces.
 
 Those gaps are separately recorded in 08-gaps-unavailable-vs-not-produced.md and in the focused identity-escalation folder. The archive should not be described as a complete transcript.
+
+
+## 10. Text extraction fidelity clarification
+
+Final verification compared Library byte-size metadata with the GitHub copies. The two long August pasted-text files were retrieved across all pages (2,447 lines and 2,684 lines respectively). Their byte-size differences are consistent with line-ending normalization by the Library text reader (CRLF to LF plus terminal newline). The text sequence is preserved, but the copies are not claimed to be byte-identical raw exports. The Library originals remain unchanged.
