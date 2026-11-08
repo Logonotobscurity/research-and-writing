@@ -34,6 +34,11 @@ This folder includes a phase map, thematic documents, a portfolio register, and 
 
 A focused record of the 6–8 November 2026 conversation that researched cognitive dissonance, identity escalation, and self-labeling techniques; generated ready-to-use attention lines and TikTok flyer cards; and iteratively refined the prompt for a daily automation that produces fresh lines. Includes phase documents and a source registry.
 
+### Possibility Field and Search-Space Assurance
+
+`conversations/possibility-field-search-space-assurance/`
+
+A focused record of the 6–8 November 2026 conversation that took verified findings from Swansea University human–AI collaborative design research (Walton et al. 2026 and related diversity studies) and translated them into a runtime primitive (Possibility Field / ExplorationPolicy) and an assurance category (Search-Space Assurance). The thread applied the primitive to the LOG_ON product and operations flowchart architecture, preserving product independence and the existing “Can do ≠ may do” principle while adding “Can generate ≠ should converge” for exploratory tasks. Includes phase documents, source registry, and gap ledger.
 
 ### Account-wide source archive
 
