@@ -22,6 +22,7 @@ It is based on the accessible conversation thread. Exact user instructions and k
 7. [SOURCE_REGISTRY.md](./SOURCE_REGISTRY.md)
 8. [07 — Archive completeness correction and verbatim preservation](./07-archive-completeness-correction-2026-11-08.md)
 9. [Source registry addendum — 8 November 2026](./SOURCE_REGISTRY-ADDENDUM-2026-11-08.md)
+10. [08 — Archival work session: assistant outputs and repository actions](./08-archival-work-session-assistant-outputs-2026-11-08.md)
 
 ## Evidence conventions
 
@@ -41,4 +42,4 @@ Append new dated phases when the automation produces further outputs or the prom
 
 ## Dated archival correction — 8 November 2026
 
-The initial archive is a phase summary, not a complete transcript or a complete preservation of every generated deliverable. The [completeness correction](./07-archive-completeness-correction-2026-11-08.md) records exactly what is and is not recoverable, establishes verbatim-preservation rules, and documents the current gaps. The [source registry addendum](./SOURCE_REGISTRY-ADDENDUM-2026-11-08.md) separates URLs already recorded from bibliographic locators checked during the later audit. Earlier phase files have been left unchanged.
+The initial archive is a phase summary, not a complete transcript or a complete preservation of every generated deliverable. The [completeness correction](./07-archive-completeness-correction-2026-11-08.md) records exactly what is and is not recoverable, establishes verbatim-preservation rules, and documents the current gaps. The [source registry addendum](./SOURCE_REGISTRY-ADDENDUM-2026-11-08.md) separates URLs already recorded from bibliographic locators checked during the later audit. [Phase 08](./08-archival-work-session-assistant-outputs-2026-11-08.md) records the assistant's outputs, inspection findings, repository actions, commit identifiers, and verification from the archival-correction exchange. Earlier phase files have been left unchanged.
