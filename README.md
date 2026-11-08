@@ -40,6 +40,12 @@ A focused record of the 6–8 November 2026 conversation that researched cogniti
 
 A focused record of the 6–8 November 2026 conversation that took verified findings from Swansea University human–AI collaborative design research (Walton et al. 2026 and related diversity studies) and translated them into a runtime primitive (Possibility Field / ExplorationPolicy) and an assurance category (Search-Space Assurance). The thread applied the primitive to the LOG_ON product and operations flowchart architecture, preserving product independence and the existing “Can do ≠ may do” principle while adding “Can generate ≠ should converge” for exploratory tasks. Includes phase documents, source registry, and gap ledger.
 
+### Cultural Bridge Tech: LLM Bias Detection Toolkit
+
+`conversations/cultural-bridge-tech-llm-bias-detection-2026-10-12/`
+
+A focused record of the October 2026 conversation that began from a shared Grok link on a Cultural Bridge LLM bias detection toolkit (SAE feature analysis + Gemma Scope for cross-lingual adversarial robustness). The thread expanded the design into a modular hybrid architecture incorporating MIMO multi-channel inputs and PAL (program-aided) executable analysis, produced full architecture and prompt-flow descriptions, and generated a proposal-ready visual diagram. Includes phase documents and sources.
+
 ### Account-wide source archive
 
 [Account-wide Source Archive](conversations/account-wide-source-archive/README.md)
