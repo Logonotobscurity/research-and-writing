@@ -10,7 +10,7 @@ A prompt version is exact only when the full text exists in an original message 
 ## Recovered prompt/skill artefacts
 - identity-tension-writing-skill.md is copied to recovered-artifacts; Library ID file_00000000dad48243ab33087cee6337ee; 5 Nov 2026. This is a full saved skill, not necessarily the first original prompt.
 - Pasted text(20260809-065238).txt is copied; Library ID file_00000000b84881f48123c9cc3dc97dba; contains CLIPIN prompt-registry, task configs, Zod schema, AIService, retry/fallback and telemetry examples.
-- Pasted text(20260816-220625).txt is copied; Library ID file_00000000226481f482f299cd474617a; contains product/visual architecture and VOXFLOW material; not a full conversation transcript.
+- Pasted text(20260816-220625).txt is copied; Library ID file_00000000226481f48e6bc73f78763164; contains product/visual architecture and VOXFLOW material; not a full conversation transcript.
 
 ## Recovered research/specification outputs
 - LOG_ON conversation synthesis, 6 Nov 2026 — file_00000000fbd481f48973f516327724c7.
