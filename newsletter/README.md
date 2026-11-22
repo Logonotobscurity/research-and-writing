@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Operational home for the LOG_ON Skills Library and the three-stage editorial process. The original source bundle is preserved at `bundles/LOG_ON_Skills_Library_v1.1.1.zip`; provenance and SHA-256 are recorded in `bundles/PROVENANCE.md`.
+Operational home for the LOG_ON Skills Library and the three-stage editorial process. The original source bundle `logon-skills-library-v1.1.1.zip` was recovered from the Library and checksum-verified. Its SHA-256 and repository-upload status are recorded in `bundles/PROVENANCE.md`. The ZIP is attached to the conversation for manual placement at `bundles/LOG_ON_Skills_Library_v1.1.1.zip`; the binary is not yet committed to this branch.
 
 ## Stage A — Memory & Portfolio Profiler
 
