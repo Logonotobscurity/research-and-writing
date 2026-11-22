@@ -67,6 +67,6 @@ Future additions should preserve exact source text when available, append new da
 
 ## LOG_ON Weekly Newsletter Pipeline
 
-The Library-audited creator profile is preserved at `CREATOR_PROFILE.json` and remains provisional. The original skills bundle is stored under `bundles/`. Exact Stage A, B and C prompts, the original ten-section Composer specification, the weekly QA template and the 22 November 2026 daily log are preserved under `newsletter/`.
+The Library-audited creator profile is preserved at `CREATOR_PROFILE.json` and remains provisional. Exact Stage A, B and C prompts, the canonical ten-section Composer specification, the weekly QA template and the 22 November 2026 daily log are preserved under `newsletter/`. The original Skills Library ZIP has been checksum-verified and attached to the conversation for repository upload; the binary itself is not yet committed. See `bundles/PROVENANCE.md`.
 
 Stage C requires an accepted creator profile and all seven exact daily logs for the completed Monday–Sunday week in `Africa/Lagos`. Six daily logs for 16–21 November 2026 are currently missing. Do not backfill, widen the date window, substitute archive material, or publish, email or schedule.
