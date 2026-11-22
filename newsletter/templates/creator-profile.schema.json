@@ -1,0 +1,34 @@
+{
+  "creator_name": "",
+  "publication_name": "",
+  "niche": "",
+  "positioning_statement": "",
+  "audience": {
+    "primary": "",
+    "secondary": "",
+    "pains": [],
+    "forbidden_assumptions": []
+  },
+  "voice": {
+    "register": "",
+    "signature_moves": [],
+    "banned_phrases": [],
+    "person_rules": ""
+  },
+  "content_pillars": [
+    {
+      "pillar": "",
+      "angle": "",
+      "authority_proof": ""
+    }
+  ],
+  "offerings": {
+    "products": [],
+    "weekly_cta_style": ""
+  },
+  "standard_story_pool": [],
+  "source_whitelist": [],
+  "differentiation_rule": "",
+  "profile_version": "",
+  "last_reviewed": ""
+}

@@ -52,8 +52,21 @@ A focused record of the October 2026 conversation that began from a shared Grok 
 
 A source-first chronology of recoverable wording, original saved outputs, prompt/version evidence, URL provenance, automation results, Library references, and explicit gaps.
 
+## LOG_ON Weekly Newsletter Pipeline
+
+The operational editorial inputs and draft-only Stage C workflow live in [`newsletter/`](newsletter/README.md). The creator-profile starting point is [`CREATOR_PROFILE.template.json`](CREATOR_PROFILE.template.json); it is a template, **not** an approved production profile. Copy and complete it as the root-level `CREATOR_PROFILE.json` before running the pipeline.
+
+Stage C requires all seven date-exact daily logs for the completed Monday–Sunday week, the completed creator profile, and the canonical ten-section LOG_ON Composer structure. Missing inputs block generation; the pipeline must not invent content, widen the date window, publish, email, or schedule.
+
 ## Archive status
 
 These materials are structured research records, **not complete raw exports of every message**. They are based on the conversation context and project details available at the time of writing. Synthesised passages are labelled as such; exact quotations are used only where exact wording is available. Project states and historical metrics must be reverified before external use.
 
 Future additions should preserve exact source text when available, append new dated phases, and record what changed and why rather than silently rewriting the historical record.
+
+
+## LOG_ON Weekly Newsletter Pipeline
+
+The Library-audited creator profile is preserved at `CREATOR_PROFILE.json` and remains provisional. Exact Stage A, B and C prompts, the canonical ten-section Composer specification, the weekly QA template and the 22 November 2026 daily log are preserved under `newsletter/`. The original Skills Library ZIP has been checksum-verified and attached to the conversation for repository upload; the binary itself is not yet committed. See `bundles/PROVENANCE.md`.
+
+Stage C requires an accepted creator profile and all seven exact daily logs for the completed Monday–Sunday week in `Africa/Lagos`. Six daily logs for 16–21 November 2026 are currently missing. Do not backfill, widen the date window, substitute archive material, or publish, email or schedule.

@@ -1,0 +1,52 @@
+{
+  "profile_status": "template_only_incomplete_not_for_pipeline",
+  "brand": {
+    "name": "LOG_ON AI",
+    "tracking_status": "confirmed",
+    "website": null,
+    "positioning": null
+  },
+  "content_themes": [
+    {
+      "theme": "Agentic AI systems and operations",
+      "status": "provisional",
+      "description": null
+    },
+    {
+      "theme": "AI automation for African organisations",
+      "status": "provisional",
+      "description": null
+    },
+    {
+      "theme": "AI agent security, assurance and governance",
+      "status": "provisional",
+      "description": null
+    },
+    {
+      "theme": "Production-ready AI systems for SMEs and resource-constrained teams",
+      "status": "provisional",
+      "description": null
+    }
+  ],
+  "intended_audiences": [],
+  "geographic_focus": [],
+  "editorial_voice": null,
+  "preferred_formats": [],
+  "source_and_fact_policy": {
+    "require_source_for_external_factual_claims": true,
+    "preserve_publication_dates_and_caveats": true,
+    "distinguish_fact_report_inference_and_hypothesis": true,
+    "never_invent_metrics_or_attributions": true
+  },
+  "prohibited_or_sensitive_topics": [],
+  "primary_calls_to_action": [],
+  "profile_owner": null,
+  "last_reviewed_on": null,
+  "approval_status": "owner_review_required",
+  "completion_instructions": [
+    "Complete every null or empty field using owner-confirmed information.",
+    "Review the four provisional themes; do not treat them as final until approved.",
+    "Save the completed production file at repository root as CREATOR_PROFILE.json.",
+    "Do not rename this template or load it as the production profile."
+  ]
+}
