@@ -1,22 +1,22 @@
-# Canonical LOG_ON Composer Structure — Required Input
+# Canonical LOG_ON Composer Structure
 
-**Status: BLOCKED / NOT PRESENT IN THIS REPOSITORY**
+**Status: recovered from the original Skills Library bundle.**
 
-Stage C has been instructed to use the exact ten-section LOG_ON Composer structure. The canonical ten section names, their order, and their section-level requirements were not found in the repository during setup.
+The exact ten-section structure is preserved verbatim in [the canonical Stage C prompt](prompts/stage-c-weekly-composer.md), recovered from the Library archive `logon-skills-library-v1.1.1.zip`.
 
-Do not invent, infer, or reconstruct the ten sections from generic newsletter conventions.
+Required section order:
 
-## Required action
+1. HEADLINE
+2. INTRO BLOCK
+3. NEWS BLOCK
+4. PLAYBOOK BLOCK
+5. RESEARCH BLOCK
+6. QUICK HITS
+7. SYNTHESIS
+8. ACTION BRIDGE
+9. PRODUCT CTA
+10. COMMUNITY CTA
 
-Add the owner-approved canonical Composer specification here, preserving:
+The canonical prompt also contains section-level requirements, word budgets, style rules, eight mandatory QA checks, and editorial handoff restrictions. Use that file as the source of truth; this summary is an index, not a replacement.
 
-- Exact names of all ten sections.
-- Exact section order.
-- Mandatory and optional fields per section.
-- Rules for sources, citations, metrics, caveats, and calls to action.
-- Any required length or formatting constraints.
-- A version identifier or source reference.
-
-Until that source is added and verified, Stage C must report **BLOCKED: canonical Composer structure unavailable**, even when the profile and all seven daily logs are present.
-
-This file is a blocker record, not a substitute Composer template.
+The recovered creator profile is still provisional, and only the 22 November 2026 daily log is present. For the completed week 16–22 November 2026, logs dated 16–21 November remain missing. Stage C must remain blocked until the profile is accepted and all seven logs exist.

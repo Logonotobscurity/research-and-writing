@@ -1,0 +1,93 @@
+{
+  "creator_name": "Oluwamayowa Adebola Logo",
+  "publication_name": "LOG_ON Weekly",
+  "niche": "Practical AI systems engineering, agentic automation, and AI assurance for African organisations.",
+  "positioning_statement": "LOG_ON helps African organisations turn fragmented workflows into useful, secure, measurable AI-enabled systems, combining automation with engineering and governance rather than selling chatbots alone.",
+  "audience": {
+    "primary": "Founders, SME operators, product and operations leaders, and IT/security decision-makers in Nigeria and across Africa who are evaluating or deploying AI-enabled workflows.",
+    "secondary": "AI builders, consultants, scale-ups, NGOs, and organisations working in low-bandwidth or resource-constrained environments.",
+    "pains": [
+      "Manual processes and disconnected tools make routine work slow and difficult to measure.",
+      "AI agents and LLM workflows can be unreliable, difficult to evaluate, or unsafe when given broad tool and data access.",
+      "Organisations need practical deployment paths that account for cost, integration complexity, security, and uneven connectivity."
+    ],
+    "forbidden_assumptions": [
+      "The audience is not limited to large enterprises.",
+      "The audience does not necessarily have large budgets, dedicated AI teams, or always-on high-bandwidth connectivity.",
+      "The audience is not necessarily deeply technical; explain implementation choices without assuming specialist knowledge.",
+      "Interest in AI does not mean an organisation is ready to grant autonomous agents unrestricted access."
+    ]
+  },
+  "voice": {
+    "register": "Direct, confident, natural, plainspoken, practical, and evidence-led. Avoid hype and generic AI language.",
+    "signature_moves": [
+      "Open with a clear claim about what changed and why it matters.",
+      "Separate shipped capabilities from previews, promises, and speculation.",
+      "Connect each story to a practical action for African operators or builders.",
+      "Disclose commercial interests, weak methodology, and unresolved uncertainty.",
+      "Prefer real implementation examples and measured outcomes over abstract claims."
+    ],
+    "banned_phrases": [
+      "leveraging",
+      "in today's rapidly evolving landscape",
+      "game-changer",
+      "revolutionary",
+      "unlock the power of",
+      "here's the best part",
+      "this is the part nobody understands"
+    ],
+    "person_rules": "Use first person singular for founder experience and editorial opinion; use LOG_ON/we only when describing agency work. Address the reader as you. Keep sentences short and make one point at a time."
+  },
+  "content_pillars": [
+    {
+      "pillar": "Agentic AI and workflow automation",
+      "angle": "Design agents around measurable business ownership, professional tools, reliable memory, controlled execution, and human approval.",
+      "authority_proof": "LOG_ON AI automation work and the user's product/automation architecture practice; specific public case-study evidence should be checked before quantitative claims are published."
+    },
+    {
+      "pillar": "AI assurance, cybersecurity, and governance",
+      "angle": "Treat agent identities, tool permissions, prompt injection, secrets, audit trails, evaluation, rollback, and human approval as product requirements.",
+      "authority_proof": "Threathunter360 product architecture and Dial 24/7 Security International IT operations/security work."
+    },
+    {
+      "pillar": "Product systems and intelligent integration",
+      "angle": "Show how APIs, RAG, databases, CRM, payments, messaging, analytics, and UX combine into complete operating systems.",
+      "authority_proof": "GetUrgent2k, Beame.ng, and LOG_ON workflow integration projects."
+    },
+    {
+      "pillar": "Deploying useful technology across Africa",
+      "angle": "Prioritise affordability, low-bandwidth resilience, local workflows, language, trust, and operational realities over imported assumptions.",
+      "authority_proof": "LOG_ON's Africa-focused automation positioning and Beame.ng logistics chatbot work."
+    }
+  ],
+  "offerings": {
+    "products": [
+      {
+        "name": "LOG_ON AI Solution Agency",
+        "one_liner": "AI systems, agentic automation, workflow integration, AI assurance, cybersecurity, and digital product engineering.",
+        "link": "https://logon.com.ng"
+      }
+    ],
+    "weekly_cta_style": "A short, honest first-person lesson from real work, followed by one concrete business benefit and a low-friction invitation. No hard sell, fabricated urgency, or unconfirmed product claims."
+  },
+  "standard_story_pool": [
+    "Public first-party article: 'How I Built a Personal AI Job Application Machine From Lagos' (LOG_ON Substack, 3 Apr 2026) — source for the creator's public AI systems and agentic workflow narrative; verify every performance claim against project records before reuse. URL: https://logon.substack.com/p/how-i-built-a-personal-ai-job-application",
+    "Beame.ng logistics chatbot: turning local ride and delivery rules into a usable conversational flow; verify current service status and pricing before reuse.",
+    "Threathunter360: an Observe–Investigate–Decide architecture connecting evidence, risk, policy, human approval, response, and audit learning.",
+    "GetUrgent2k: a marketplace connecting brands and people for research, secret shopping, and multimedia tasks; use only current, verified product metrics.",
+    "Dial 24/7 Security: computer vision and IoT surveillance, operational reliability, identity controls, and security monitoring; substantiate all performance figures before publication.",
+    "Agent operations: why an agent needs a measurable ongoing KPI, accountable role, persistent evidence, bounded tools, and a human approval contract.",
+    "Low-bandwidth product design: how African deployments should handle connectivity, messaging-first experiences, integration failures, and human handoff."
+  ],
+  "source_whitelist": [],
+  "source_registry_status": "The user refers to a 42-source RSS registry, but the actual feed URLs and names were not supplied in this session. Do not claim those 42 feeds have been scanned. Use named primary sources and reputable trade publications as a clearly labelled fallback until the registry is provided.",
+  "differentiation_rule": "Every issue must explain how a real AI, automation, or security development changes the way African organisations can build, secure, measure, or operate useful systems. Show the implementation implication, operating constraint, and evidence quality. Generic product summaries fail this test.",
+  "profile_status": "Provisional; public Substack author footprint identified. Confirm exact LinkedIn URLs, publication cadence/byline preferences, 42-source RSS registry, current offerings, and claims supported by project records.",
+  "public_author_footprint": {
+    "verified_publication": "LOG_ON Substack",
+    "verified_article": "How I Built a Personal AI Job Application Machine From Lagos",
+    "published": "2026-04-03",
+    "url": "https://logon.substack.com/p/how-i-built-a-personal-ai-job-application",
+    "linkedin_identity_status": "No exact LinkedIn company page or personal profile confidently attributable from the search results in this run. Do not count similarly named Logon/Logon Technologies pages."
+  }
+}

@@ -63,3 +63,10 @@ Stage C requires all seven date-exact daily logs for the completed Monday–Sund
 These materials are structured research records, **not complete raw exports of every message**. They are based on the conversation context and project details available at the time of writing. Synthesised passages are labelled as such; exact quotations are used only where exact wording is available. Project states and historical metrics must be reverified before external use.
 
 Future additions should preserve exact source text when available, append new dated phases, and record what changed and why rather than silently rewriting the historical record.
+
+
+## LOG_ON Weekly Newsletter Pipeline
+
+The Library-audited creator profile is preserved at `CREATOR_PROFILE.json` and remains provisional. The original skills bundle is stored under `bundles/`. Exact Stage A, B and C prompts, the original ten-section Composer specification, the weekly QA template and the 22 November 2026 daily log are preserved under `newsletter/`.
+
+Stage C requires an accepted creator profile and all seven exact daily logs for the completed Monday–Sunday week in `Africa/Lagos`. Six daily logs for 16–21 November 2026 are currently missing. Do not backfill, widen the date window, substitute archive material, or publish, email or schedule.
